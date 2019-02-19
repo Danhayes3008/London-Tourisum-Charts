@@ -6,6 +6,7 @@ function makeGraphs(error, londonData){
     var ndx = crossfilter(londonData);
     
     show_selector(ndx);
+    show_reason_for_visit(ndx);
     
     dc.renderAll();
 }
@@ -19,4 +20,21 @@ function show_selector(ndx){
     dc.selectMenu('#selectMenu')
         .dimension(dim)
         .group(group);
+}
+
+function show_reason_for_visit(ndx){
+    var dim = ndx.dimension(dc.pluck('mode'));
+    var group = dim.group();
+
+    dc.barChart("#reason")
+        .width(400)
+        .height(700)
+        .margins({ top: 10, right: 50, bottom: 30, left: 80 })
+        .dimension(dim)
+        .group(group)
+        .transitionDuration(500)
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .xAxisLabel("method of transport")
+        .yAxis().ticks(20);
 }
