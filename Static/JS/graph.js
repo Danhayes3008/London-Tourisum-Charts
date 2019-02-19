@@ -23,18 +23,18 @@ function show_selector(ndx){
 }
 
 function show_reason_for_visit(ndx){
-    var dim = ndx.dimension(dc.pluck('mode'));
+    var dim = ndx.dimension(dc.pluck('purpose'));
     var group = dim.group();
 
     dc.barChart("#reason")
-        .width(400)
-        .height(700)
-        .margins({ top: 10, right: 50, bottom: 30, left: 80 })
+        .width(600)
+        .height(400)
+        .margins({ top: 10, right: 50, bottom: 40, left: 80 })
         .dimension(dim)
         .group(group)
         .transitionDuration(500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .xAxisLabel("method of transport")
-        .yAxis().ticks(20);
+        .yAxis().ticks(5);
 }
