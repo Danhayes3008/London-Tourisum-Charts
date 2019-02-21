@@ -5,12 +5,19 @@ queue()
 function makeGraphs(error, londonData){
     var ndx = crossfilter(londonData);
     
+    londonData.forEach(function(d) {
+        d.country = parseInt(d["market"]);
+        d.night = parseInt(d["nights"]);
+        d.year = parseInt(d["year"]);
+    })
+    
     show_selector(ndx);
     // show_total_spent(ndx, "#spent");
     show_reason_for_visit(ndx);
     show_method_of_arrival(ndx);
-     show_country_of_origin(ndx);
-    
+    show_country_of_origin(ndx);
+    nights_stayed_per_country(ndx);
+
     dc.renderAll();
 }
 
@@ -83,4 +90,39 @@ function show_country_of_origin(ndx){
         .group(countryOfOrigin)
         .colorAccessor(function(d){ return d.key[0]; })
         .colors(typeColors);
+}
+
+function nights_stayed_per_country(ndx){
+    var countryColors = d3.scale.ordinal()
+        .domain(["Argentina", "Australia", "Austria", "Bahrain", "Belgium", "Brazil", "Bulgaria", "Canada", "Chile", 
+        "China", "Czech Republic", "Denmark", "Egypt", "Finland", "France", "Germany", "Greece", "Hong Kong",
+        "Hungary", "Iceland", "India", "Indonesia", "Irish Republic", "Israel", "Italy", "Japan", "Kenya",
+        "Kuwait", "Luxembourg", "Malaysia", "Mexico", "Netherlands", "New Zealand", "Nigeria", "Norway", "Omen"])
+        .range(["#0481BB", "#048AC9", "#069CE3"]);
+    var countryDim = ndx.dimension(dc.pluck("nights"));
+    var nDim = ndx.dimension(function(d){
+        return [d.market, d.nights, d.year];
+    });
+    var nightsGroup = nDim.group();
+    var minNights = countryDim.bottom(1)[0].year;
+    var maxNights = countryDim.top(1)[0].year;
+    
+    dc.scatterPlot("#scatter1")
+        .width(800)
+        .height(400)
+        .x(d3.scale.linear().domain([minNights, maxNights]))
+        .brushOn(false)
+        .symbolSize(8)
+        .clipPadding(10)
+        .title(function(d) {
+            return d.key[1] + " stayed " + d.key[2];
+        })
+        .colorAccessor(function(d) {
+            return d.key[0];
+        })
+        .colors(countryColors)
+        .dimension(nDim)
+        .group(nightsGroup)
+        .margins({ top: 10, right: 50, bottom: 75, left: 75 })
+        .xAxis().ticks(10);
 }
