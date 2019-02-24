@@ -17,8 +17,11 @@ function makeGraphs(error, londonData){
     show_reason_for_visit(ndx);
     show_method_of_arrival(ndx);
     show_country_of_origin(ndx);
+    show_visit_per_year(ndx);
     nights_stayed_per_country(ndx);
+    visits_against_country(ndx);
     visits_per_country(ndx);
+    visits_per_year(ndx);
 
     dc.renderAll();
 }
@@ -94,6 +97,24 @@ function show_country_of_origin(ndx){
         .colors(typeColors);
 }
 
+function show_visit_per_year(ndx){
+    var typeColors = d3.scale.ordinal()
+        .domain(["2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", 
+        "2013", "2014", "2015", "2016", "2017", "2018"])
+        .range(["#0481BB", "#048AC9", "#069CE3"]);
+    var countryDim = ndx.dimension(dc.pluck("year"));
+    var countryOfOrigin = countryDim.group();
+    
+    dc.pieChart("#pie-spend")
+        .height(250)
+        .radius(100)
+        .transitionDuration(500)
+        .dimension(countryDim)
+        .group(countryOfOrigin)
+        .colorAccessor(function(d){ return d.key[0]; })
+        .colors(typeColors);
+}
+
 function nights_stayed_per_country(ndx){
     var countryColors = d3.scale.ordinal()
         .domain(["Argentina", "Australia", "Austria", "Bahrain", "Belgium", "Brazil", "Bulgaria", "Canada", "Chile", 
@@ -129,7 +150,7 @@ function nights_stayed_per_country(ndx){
         .xAxis().ticks(10);
 }
 
-function visits_per_country(ndx){
+function visits_against_country(ndx){
     var countryColors = d3.scale.ordinal()
         .domain(["Argentina", "Australia", "Austria", "Bahrain", "Belgium", "Brazil", "Bulgaria", "Canada", "Chile", 
         "China", "Czech Republic", "Denmark", "Egypt", "Finland", "France", "Germany", "Greece", "Hong Kong",
@@ -162,4 +183,38 @@ function visits_per_country(ndx){
         .group(visitGroup)
         .margins({ top: 10, right: 50, bottom: 75, left: 75 })
         .xAxis().ticks(10);
+}
+
+function visits_per_country(ndx){
+    var dim = ndx.dimension(dc.pluck('market'));
+    var group = dim.group();
+
+    dc.barChart("#market")
+        .width(1600)
+        .height(200)
+        .margins({ top: 10, right: 50, bottom: 40, left: 80 })
+        .dimension(dim)
+        .group(group)
+        .transitionDuration(500)
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .xAxisLabel("Visits per country")
+        .yAxis().ticks(5);
+}
+
+function visits_per_year(ndx){
+    var dim = ndx.dimension(dc.pluck('market'));
+    var group = dim.group();
+
+    dc.lineChart("#reason1")
+        .width(1200)
+        .height(400)
+        .margins({ top: 10, right: 50, bottom: 40, left: 80 })
+        .dimension(dim)
+        .group(group)
+        .transitionDuration(500)
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .xAxisLabel("method of transport")
+        .yAxis().ticks(5);
 }
