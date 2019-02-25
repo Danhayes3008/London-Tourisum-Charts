@@ -6,10 +6,17 @@ function makeGraphs(error, londonData){
     var ndx = crossfilter(londonData);
     
     londonData.forEach(function(d) {
-        d.country = parseInt(d["market"]);
-        d.night = parseInt(d["nights"]);
-        d.year = parseInt(d["year"]);
-        d.visits = parseInt(d["visits"]);
+        d.country = parseInt(d.market);
+        d.arrival = parseInt(d.mode);
+        d.reason = parseInt(d.purpose);
+        d.nights = parseInt(d.nights);
+        d.year = parseInt(d.year);
+        d.spend = parseInt(d.spend);
+        d.visits = parseInt(d.visits);
+        d.quarter = parseInt(d.quarter);
+        d.sample = parseInt(d.sample);
+        d.area = parseInt(d.area);
+
     })
     
     show_selector(ndx);
@@ -29,11 +36,11 @@ function makeGraphs(error, londonData){
 
 function show_selector(ndx){
     
-    var dim = ndx.dimension(dc.pluck('market'));
-    var group = dim.group();
+    var countryDim = ndx.dimension(dc.pluck('market'));
+    var group = countryDim.group();
     
     dc.selectMenu('#selectMenu')
-        .dimension(dim)
+        .dimension(countryDim)
         .group(group);
 }
 
@@ -44,14 +51,14 @@ function show_selector(ndx){
 // }
 
 function show_reason_for_visit(ndx){
-    var dim = ndx.dimension(dc.pluck('purpose'));
-    var group = dim.group();
+    var reasonDim = ndx.dimension(dc.pluck('purpose'));
+    var group = reasonDim.group();
 
     dc.barChart("#reason")
         .width(600)
         .height(400)
         .margins({ top: 10, right: 50, bottom: 40, left: 80 })
-        .dimension(dim)
+        .dimension(reasonDim)
         .group(group)
         .transitionDuration(500)
         .x(d3.scale.ordinal())
@@ -126,7 +133,7 @@ function nights_stayed_per_country(ndx){
     var nDim = ndx.dimension(function(d){
         return [d.market, d.nights, d.year];
     });
-    var nightsGroup = nDim.group();
+    var nightsGroup = countryDim.group();
     var minNights = countryDim.bottom(1)[0].year;
     var maxNights = countryDim.top(1)[0].year;
     
@@ -144,7 +151,7 @@ function nights_stayed_per_country(ndx){
             return d.key[0];
         })
         .colors(countryColors)
-        .dimension(nDim)
+        .dimension(countryDim)
         .group(nightsGroup)
         .margins({ top: 10, right: 50, bottom: 75, left: 75 })
         .xAxis().ticks(10);
@@ -161,7 +168,7 @@ function visits_against_country(ndx){
     var vDim = ndx.dimension(function(d){
         return [d.market, d.visits, d.year];
     });
-    var visitGroup = vDim.group();
+    var visitGroup = countryDim.group();
     var minVisit = countryDim.bottom(1)[0].year;
     var maxVisit = countryDim.top(1)[0].year;
     
@@ -179,21 +186,21 @@ function visits_against_country(ndx){
             return d.key[0];
         })
         .colors(countryColors)
-        .dimension(vDim)
+        .dimension(countryDim)
         .group(visitGroup)
         .margins({ top: 10, right: 50, bottom: 75, left: 75 })
         .xAxis().ticks(10);
 }
 
 function visits_per_country(ndx){
-    var dim = ndx.dimension(dc.pluck('market'));
-    var group = dim.group();
+    var countryDim = ndx.dimension(dc.pluck('market'));
+    var group = countryDim.group();
 
     dc.barChart("#market")
         .width(1600)
         .height(200)
         .margins({ top: 10, right: 50, bottom: 40, left: 80 })
-        .dimension(dim)
+        .dimension(countryDim)
         .group(group)
         .transitionDuration(500)
         .x(d3.scale.ordinal())
@@ -203,14 +210,14 @@ function visits_per_country(ndx){
 }
 
 function visits_per_year(ndx){
-    var dim = ndx.dimension(dc.pluck('market'));
-    var group = dim.group();
+    var countryDim = ndx.dimension(dc.pluck('market'));
+    var group = countryDim.group();
 
     dc.lineChart("#reason1")
         .width(1200)
         .height(400)
         .margins({ top: 10, right: 50, bottom: 40, left: 80 })
-        .dimension(dim)
+        .dimension(countryDim)
         .group(group)
         .transitionDuration(500)
         .x(d3.scale.ordinal())
