@@ -86,12 +86,9 @@ function show_method_of_arrival(ndx) {
 
 function show_country_of_origin(ndx){
     var typeColors = d3.scale.ordinal()
-        .domain(["Argentina", "Australia", "Austria", "Bahrain", "Belgium", "Brazil", "Bulgaria", "Canada", "Chile", 
-        "China", "Czech Republic", "Denmark", "Egypt", "Finland", "France", "Germany", "Greece", "Hong Kong",
-        "Hungary", "Iceland", "India", "Indonesia", "Irish Republic", "Israel", "Italy", "Japan", "Kenya",
-        "Kuwait", "Luxembourg", "Malaysia", "Mexico", "Netherlands", "New Zealand", "Nigeria", "Norway", "Omen"])
-        .range(["#0481BB", "#048AC9", "#069CE3"]);
-    var countryDim = ndx.dimension(dc.pluck("market"));
+        .domain(["Business", "Holiday", "Study", "Miscellaneous", "VFR"])
+        .range(["#0481BB", "#048AC9", "#069CE3" ]);
+    var countryDim = ndx.dimension(dc.pluck("purpose"));
     var countryOfOrigin = countryDim.group();
     
     dc.pieChart("#country")
@@ -106,10 +103,9 @@ function show_country_of_origin(ndx){
 
 function show_visit_per_year(ndx){
     var typeColors = d3.scale.ordinal()
-        .domain(["2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", 
-        "2013", "2014", "2015", "2016", "2017", "2018"])
+        .domain(["1-3 nights", "4-7 nights", "8-14 nights", "15+ nights"])
         .range(["#0481BB", "#048AC9", "#069CE3"]);
-    var countryDim = ndx.dimension(dc.pluck("year"));
+    var countryDim = ndx.dimension(dc.pluck("dur_stay"));
     var countryOfOrigin = countryDim.group();
     
     dc.pieChart("#pie-spend")
