@@ -51,7 +51,7 @@ function show_selector(ndx){
 // }
 
 function show_reason_for_visit(ndx){
-    var reasonDim = ndx.dimension(dc.pluck('purpose'));
+    var reasonDim = ndx.dimension(dc.pluck('market'));
     var group = reasonDim.group();
 
     dc.barChart("#reason")
@@ -63,7 +63,7 @@ function show_reason_for_visit(ndx){
         .transitionDuration(500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .xAxisLabel("method of transport")
+        .xAxisLabel("country")
         .yAxis().ticks(5);
 }
 
