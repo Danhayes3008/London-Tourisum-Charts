@@ -16,25 +16,25 @@ function makeGraphs(error, londonData) {
            d.visits = parseInt(d.visits);
        });
         
-        var date_dim = ndx.dimension(dc.pluck('visits'));
+        var visit_dim = ndx.dimension(dc.pluck('visits'));
         
-        var min_spent = date_dim.bottom(1)[0].visits;
-        var max_spent = date_dim.top(1)[0].visits;
+        var min_visited = visit_dim.bottom(1)[0].visits;
+        var max_visited = visit_dim.top(1)[0].visits;
         
-        var spend_dim = ndx.dimension(function (d) {
+        var london_dim = ndx.dimension(function (d) {
             return [d.visits, d.spend, d.market, d.year, d.quarter, d.purpose];
         });
         
         var tradeColors = d3.scale.ordinal()
-            .domain(["Q1", "Q2", "Q3", "Q4"])
+            .domain(["q1", "q2", "q3", "q4"])
             .range(["red", "green", "blue", "purple"]);
 
 
-        var spend_group = spend_dim.group();
+        var london_group = london_dim.group();
         
         var subChart = function(c) {
             return dc.scatterPlot(c)
-                        .symbolSize(8)
+                        .symbolSize(4)
                         .highlightedSize(10);
         };
 
@@ -44,21 +44,21 @@ function makeGraphs(error, londonData) {
         .width(770)
         .height(480)
         .chart(subChart)
-        .x(d3.time.scale().domain([min_spent, max_spent]))
+        .x(d3.time.scale().domain([min_visited, max_visited]))
         .brushOn(false)
-        .clipPadding(10)
-        .yAxisLabel("Spend")
-        .xAxisLabel("Date")
+        .clipPadding(20)
+        .yAxisLabel("year")
+        .xAxisLabel("visits")
         .elasticY(true)
-        .dimension(spend_dim)
-        .group(spend_group)
+        .dimension(london_dim)
+        .group(london_group)
         .mouseZoomable(true)
         .shareTitle(false) // allow default scatter title to work
         .seriesAccessor(function(d) {return d.key[2];})
         .keyAccessor(function(d) {return d.key[0];})
         .valueAccessor(function(d) {return +d.key[3];})
         .colorAccessor(function (d) {
-            return d.key[4].market;
+            return d.key[4];
         })
         .colors(tradeColors)
 
