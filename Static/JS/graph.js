@@ -9,10 +9,10 @@ function makeGraphs(error, londonData){
         d.country = parseInt(d.market);
         d.arrival = parseInt(d.mode);
         d.reason = parseInt(d.purpose);
-        d.nights = parseInt(d.nights);
+        d.nights = parseFloat(d.nights);
         d.year = parseInt(d.year);
-        d.spend = parseInt(d.spend);
-        d.visits = parseInt(d.visits);
+        d.spend = parseFloat(d.spend);
+        d.visits = parseFloat(d.visits);
         d.quarter = parseInt(d.quarter);
         d.sample = parseInt(d.sample);
         d.area = parseInt(d.area);
@@ -26,7 +26,6 @@ function makeGraphs(error, londonData){
     show_country_of_origin(ndx);
     show_visit_per_year(ndx);
     nights_stayed_per_country(ndx);
-    visits_against_country(ndx);
     visits_per_country(ndx);
     visits_per_year(ndx);
 
@@ -153,40 +152,6 @@ function nights_stayed_per_country(ndx){
         .xAxis().ticks(10);
 }
 
-function visits_against_country(ndx){
-    var countryColors = d3.scale.ordinal()
-        .domain(["Argentina", "Australia", "Austria", "Bahrain", "Belgium", "Brazil", "Bulgaria", "Canada", "Chile", 
-        "China", "Czech Republic", "Denmark", "Egypt", "Finland", "France", "Germany", "Greece", "Hong Kong",
-        "Hungary", "Iceland", "India", "Indonesia", "Irish Republic", "Israel", "Italy", "Japan", "Kenya",
-        "Kuwait", "Luxembourg", "Malaysia", "Mexico", "Netherlands", "New Zealand", "Nigeria", "Norway", "Omen"])
-        .range(["#0481BB", "#048AC9", "#069CE3"]);
-    var countryDim = ndx.dimension(dc.pluck("visits"));
-    var vDim = ndx.dimension(function(d){
-        return [d.market, d.visits, d.year];
-    });
-    var visitGroup = countryDim.group();
-    var minVisit = countryDim.bottom(1)[0].year;
-    var maxVisit = countryDim.top(1)[0].year;
-    
-    dc.scatterPlot("#scatter2")
-        .width(800)
-        .height(400)
-        .x(d3.scale.linear().domain([minVisit, maxVisit]))
-        .brushOn(false)
-        .symbolSize(8)
-        .clipPadding(10)
-        .title(function(d) {
-            return d.key[1] + " visited " + d.key[2];
-        })
-        .colorAccessor(function(d) {
-            return d.key[0];
-        })
-        .colors(countryColors)
-        .dimension(countryDim)
-        .group(visitGroup)
-        .margins({ top: 10, right: 50, bottom: 75, left: 75 })
-        .xAxis().ticks(10);
-}
 
 function visits_per_country(ndx){
     var countryDim = ndx.dimension(dc.pluck('market'));
@@ -220,4 +185,4 @@ function visits_per_year(ndx){
         .xUnits(dc.units.ordinal)
         .xAxisLabel("method of transport")
         .yAxis().ticks(5);
-}
+} 
