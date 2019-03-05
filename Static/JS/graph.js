@@ -9,11 +9,11 @@ function makeGraphs(error, londonData){
         d.country = parseInt(d.market);
         d.arrival = parseInt(d.mode);
         d.reason = parseInt(d.purpose);
-        d.nights = parseFloat(d.nights);
+        d.nights = parseInt(d.nights);
         d.year = parseInt(d.year);
         d.spend = parseInt(d.spend);
-        d.visits = parseFloat(d.visits);
-        d.quarter = parseFloat(d.quarter);
+        d.visits = parseInt(d.visits);
+        d.quarter = parseInt(d.quarter);
         d.sample = parseInt(d.sample);
         d.area = parseInt(d.area);
 
@@ -28,7 +28,6 @@ function makeGraphs(error, londonData){
     nights_stayed_per_country(ndx);
     visits_per_country(ndx);
     visits_per_country1(ndx);
-    visits_per_year(ndx);
 
     dc.renderAll();
 }
@@ -228,18 +227,21 @@ function visits_per_country(ndx){
 }
 
 function visits_per_year(ndx){
-    var countryDim = ndx.dimension(dc.pluck('market'));
-    var group = countryDim.group();
-
-    dc.lineChart("#reason1")
-        .width(1200)
-        .height(400)
-        .margins({ top: 10, right: 50, bottom: 40, left: 80 })
-        .dimension(countryDim)
-        .group(group)
-        .transitionDuration(500)
-        .x(d3.scale.ordinal())
-        .xUnits(dc.units.ordinal)
-        .xAxisLabel("method of transport")
-        .yAxis().ticks(5);
+    var chart = dc.lineChart('#reason1');
+  d3.csv('Static/Data/international-visitors-london.csv').then(function(counts) {
+      var ndx            = crossfilter(counts),
+          visitsDimension = ndx.dimension(function(d) {return d.visits;}),
+          sumGroup       = visitsDimension.group().reduceSum(function(d) {return d.visits;});
+      chart
+          .width(768)
+          .height(380)
+          .x(d3.scaleBand())
+          .xUnits(dc.units.ordinal)
+          .brushOn(false)
+          .xAxisLabel('Fruit')
+          .yAxisLabel('Quantity Sold')
+          .dimension(visitsDimension)
+          .group(sumGroup);
+      chart.render();
+  });
 } 
