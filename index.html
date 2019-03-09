@@ -1,51 +1,75 @@
 <!DOCTYPE html>
 <html>
-    <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="static/css/dc.min.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script type="text/javascript" src="Static/JS/d3.min.js"></script>
     <script type="text/javascript" src="Static/JS/crossfilter.min.js"></script>
     <script type="text/javascript" src="Static/JS/dc.min.js"></script>
     <script type="text/javascript" src="Static/JS/queue.min.js"></script>
     <script type="text/javascript" src="Static/JS/graph.js"></script>
+    <script type="text/javascript" src="Static/JS/line.js"></script>
 
-    
-    </head>
+</head>
 <body>
-    <div id="selectMenu"></div>
-    <div>
-        <p>Reason for visit</p>
+    <div class="container">
+        <div class="row">
+            <div id="selectMenu"></div>
+        </div>
     </div>
-    <div id="reason"></div>
+    <div class="container">
+        <div class="row">
+            <p>Reason for visit</p>
+            <div id="reason"></div>
+        </div>
+    </div>
     <div id="spent"></div>
-    <div>
-        <p>Method of entry to london</p>
+    <div class="container">
+        <div class="row">
+            <p>Method of entry to london</p>
+            <div id="arrival"></div>
+        </div>
     </div>
-    <div id="arrival"></div>
-    <div>
-        <p>Total visits per country</p>
+    <div class="container">
+        <div class="row">
+            <p>Total visits per country</p>
+            <div id="country"></div>
+        </div>
     </div>
-    <div id="country"></div>
-    <div><p>spend per year</p></div>
-    <div id="pie-spend"></div>
-    <div>
-        <p>Nights stayed scatter chart</p>
+    <div class="container">
+        <div class="row">
+            <p>spend per year</p>
+            <div id="pie-spend"></div>
+        </div>
     </div>
-    <div id="scatter1"></div>
-    <div>
-        <p>visits per country scatter chart</p>
+    <div class="container">
+        <div class="row">
+            <p>Nights stayed scatter chart</p>
+            <div id="scatter1"></div>
+        </div>
     </div>
-    <div id="scatter2"></div>
-    <div><p>Visits per country</p></div>
-    <div id="market"></div>
+    <div class="container">
+        <div class="row">
+            <p>visits per country scatter chart</p>
+            <div id="scatter2"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <p>Visits per country</p>
+            <div id="market"></div>
+        </div>
+    </div>
     <div id="reason1"></div>
-    
+
 </body>
+
 </html>
