@@ -20,7 +20,7 @@ function makeGraphs(error, londonData){
     })
     
     show_selector(ndx);
-    // show_total_spent(ndx, "#spent");
+    // show_total_spent(ndx, "visits", "#spent");
     show_reason_for_visit(ndx);
     show_method_of_arrival(ndx);
     show_country_of_origin(ndx);
@@ -29,6 +29,7 @@ function makeGraphs(error, londonData){
     visits_per_country(ndx);
     // visits_per_country1(ndx);
     // visits_per_year(ndx);
+
 
     dc.renderAll();
 }
@@ -44,12 +45,50 @@ function show_selector(ndx){
         .group(group);
 }
 
-// function show_total_spent(ndx, spent, element){
-//     var totalSpent = ndx.groupAll()
-//     dc.numberDisplay()
-        
-// }
+$(document).ready(function(){
+  $("#selectMenu").click(function(){
+    $(this).set();
+  });
+});
 
+//  function show_total_spent(ndx, spent, element) {
+//      var percentageThatAreProf = ndx.groupAll().reduce(
+//          function(p, v) {
+//              if (v.visits === amount) {
+//                  p.count++;
+//                  if (v.visits === "Prof") {
+//                      p.are_prof++;
+//                  }
+//              }
+//              return p;
+//          },
+//          function(p, v) {
+//              if (v.visits === amount) {
+//                  p.count--;
+//                  if (v.visits === "Prof") {
+//                      p.are_prof--;
+//                  }
+//              }
+//              return p;
+//          },
+//          function() {
+//              return { count: 0, are_prof: 0 };
+//          },
+//      );
+
+//      dc.numberDisplay(element)
+//          .formatNumber(d3.format(".2£"))
+//          .valueAccessor(function(d) {
+//              if (d.count == 0) {
+//                  return 0;
+//              }
+//              else {
+//                  return (d.are_prof / d.count);
+//              }
+//          })
+//          .group(percentageThatAreProf)
+//  }
+ 
 function show_reason_for_visit(ndx){
     var reasonDim = ndx.dimension(dc.pluck('market'));
     var group = reasonDim.group();
