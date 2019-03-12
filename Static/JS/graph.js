@@ -21,6 +21,7 @@ function makeGraphs(error, londonData){
     
     show_selector(ndx);
     show_total_spent(ndx);
+    show_total_visits(ndx);
     show_reason_for_visit(ndx);
     show_method_of_arrival(ndx);
     show_country_of_origin(ndx);
@@ -68,11 +69,40 @@ function show_total_spent(ndx) {
     );
 
     dc.numberDisplay("#spent")
-        .formatNumber(d3.format(".01"))
+        .formatNumber(d3.format("1"))
         .valueAccessor(function(d) {
             return d.Spend;
         })
         .group(totalSpend);
+}
+
+function show_total_visits(ndx){
+    var totalVisits = ndx.groupAll().reduce(
+        function(p, v) {
+            if (v.visits === 1) {
+                p.visits++;
+            }
+            return p;
+        },
+        function(p, v) {
+            if (v.visits === 1) {
+                p.visits--;
+            }
+            return p;
+        },
+        function() {
+            return {
+                visits: 0
+            };
+        }
+    );
+
+    dc.numberDisplay("#visits")
+        .formatNumber(d3.format("1"))
+        .valueAccessor(function(d) {
+            return d.visits;
+        })
+        .group(totalVisits);
 }
 
 function show_reason_for_visit(ndx) {
