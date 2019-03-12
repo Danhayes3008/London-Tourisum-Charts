@@ -31,25 +31,20 @@ function makeGraphs(error, londonData){
     // visits_per_year(ndx);
 
 
+
     dc.renderAll();
 }
 
 
 function show_selector(ndx){
-    
     var countryDim = ndx.dimension(dc.pluck('market'));
     var group = countryDim.group();
-    
+
     dc.selectMenu('#selectMenu')
         .dimension(countryDim)
         .group(group);
-}
+    }
 
-$(document).ready(function(){
-  $("#selectMenu").click(function(){
-    $(this).set();
-  });
-});
 
 //  function show_total_spent(ndx, spent, element) {
 //      var percentageThatAreProf = ndx.groupAll().reduce(
