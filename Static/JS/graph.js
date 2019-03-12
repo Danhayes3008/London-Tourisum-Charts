@@ -20,7 +20,7 @@ function makeGraphs(error, londonData){
     })
     
     show_selector(ndx);
-    // show_total_spent(ndx, "visits", "#spent");
+    show_total_spent(ndx);
     show_reason_for_visit(ndx);
     show_method_of_arrival(ndx);
     show_country_of_origin(ndx);
@@ -36,56 +36,47 @@ function makeGraphs(error, londonData){
 }
 
 
-function show_selector(ndx){
+function show_selector(ndx) {
     var countryDim = ndx.dimension(dc.pluck('market'));
     var group = countryDim.group();
 
     dc.selectMenu('#selectMenu')
         .dimension(countryDim)
         .group(group);
-    }
+}
 
 
-//  function show_total_spent(ndx, spent, element) {
-//      var percentageThatAreProf = ndx.groupAll().reduce(
-//          function(p, v) {
-//              if (v.visits === amount) {
-//                  p.count++;
-//                  if (v.visits === "Prof") {
-//                      p.are_prof++;
-//                  }
-//              }
-//              return p;
-//          },
-//          function(p, v) {
-//              if (v.visits === amount) {
-//                  p.count--;
-//                  if (v.visits === "Prof") {
-//                      p.are_prof--;
-//                  }
-//              }
-//              return p;
-//          },
-//          function() {
-//              return { count: 0, are_prof: 0 };
-//          },
-//      );
+function show_total_spent(ndx) {
+    var totalSpend = ndx.groupAll().reduce(
+        function(p, v) {
+            if (v.spend === 1) {
+                p.Spend++;
+            }
+            return p;
+        },
+        function(p, v) {
+            if (v.spend === 1) {
+                p.Spend--;
+            }
+            return p;
+        },
+        function() {
+            return {
+                Spend: 0
+            };
+        }
+    );
 
-//      dc.numberDisplay(element)
-//          .formatNumber(d3.format(".2£"))
-//          .valueAccessor(function(d) {
-//              if (d.count == 0) {
-//                  return 0;
-//              }
-//              else {
-//                  return (d.are_prof / d.count);
-//              }
-//          })
-//          .group(percentageThatAreProf)
-//  }
- 
-function show_reason_for_visit(ndx){
-    var reasonDim = ndx.dimension(dc.pluck('market'));
+    dc.numberDisplay("#spent")
+        .formatNumber(d3.format(".01"))
+        .valueAccessor(function(d) {
+            return d.Spend;
+        })
+        .group(totalSpend);
+}
+
+function show_reason_for_visit(ndx) {
+    var reasonDim = ndx.dimension(dc.pluck('mode'));
     var group = reasonDim.group();
 
     dc.barChart("#reason")
@@ -97,14 +88,14 @@ function show_reason_for_visit(ndx){
         .transitionDuration(500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .xAxisLabel("country")
+        .xAxisLabel("method of arrival")
         .yAxis().ticks(5);
 }
 
 function show_method_of_arrival(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["Tunnel", "Sea", "Air"])
-        .range(["#0481BB", "#048AC9", "#069CE3" ]);
+        .range(["#0481BB", "#048AC9", "#069CE3"]);
     var arrivalDim = ndx.dimension(dc.pluck("mode"));
     var methodOfArrival = arrivalDim.group();
 
@@ -118,55 +109,56 @@ function show_method_of_arrival(ndx) {
         .colors(typeColors);
 }
 
-function show_country_of_origin(ndx){
+function show_country_of_origin(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["Business", "Holiday", "Study", "Miscellaneous", "VFR"])
-        .range(["#0481BB", "#048AC9", "#069CE3" ]);
+        .range(["#0481BB", "#048AC9", "#069CE3"]);
     var countryDim = ndx.dimension(dc.pluck("purpose"));
     var countryOfOrigin = countryDim.group();
-    
+
     dc.pieChart("#country")
         .height(250)
         .radius(100)
         .transitionDuration(500)
         .dimension(countryDim)
         .group(countryOfOrigin)
-        .colorAccessor(function(d){ return d.key[0]; })
+        .colorAccessor(function(d) { return d.key[0]; })
         .colors(typeColors);
 }
 
-function show_visit_per_year(ndx){
+function show_visit_per_year(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["1-3 nights", "4-7 nights", "8-14 nights", "15+ nights"])
         .range(["#0481BB", "#048AC9", "#069CE3"]);
     var countryDim = ndx.dimension(dc.pluck("dur_stay"));
     var countryOfOrigin = countryDim.group();
-    
+
     dc.pieChart("#pie-spend")
         .height(250)
         .radius(100)
         .transitionDuration(500)
         .dimension(countryDim)
         .group(countryOfOrigin)
-        .colorAccessor(function(d){ return d.key[0]; })
+        .colorAccessor(function(d) { return d.key[0]; })
         .colors(typeColors);
 }
 
-function nights_stayed_per_country(ndx){
+function nights_stayed_per_country(ndx) {
     var countryColors = d3.scale.ordinal()
-        .domain(["Argentina", "Australia", "Austria", "Bahrain", "Belgium", "Brazil", "Bulgaria", "Canada", "Chile", 
-        "China", "Czech Republic", "Denmark", "Egypt", "Finland", "France", "Germany", "Greece", "Hong Kong",
-        "Hungary", "Iceland", "India", "Indonesia", "Irish Republic", "Israel", "Italy", "Japan", "Kenya",
-        "Kuwait", "Luxembourg", "Malaysia", "Mexico", "Netherlands", "New Zealand", "Nigeria", "Norway", "Omen"])
+        .domain(["Argentina", "Australia", "Austria", "Bahrain", "Belgium", "Brazil", "Bulgaria", "Canada", "Chile",
+            "China", "Czech Republic", "Denmark", "Egypt", "Finland", "France", "Germany", "Greece", "Hong Kong",
+            "Hungary", "Iceland", "India", "Indonesia", "Irish Republic", "Israel", "Italy", "Japan", "Kenya",
+            "Kuwait", "Luxembourg", "Malaysia", "Mexico", "Netherlands", "New Zealand", "Nigeria", "Norway", "Omen"
+        ])
         .range(["#0481BB", "#048AC9", "#069CE3"]);
     var countryDim = ndx.dimension(dc.pluck("nights"));
-    var nDim = ndx.dimension(function(d){
+    var nDim = ndx.dimension(function(d) {
         return [d.market, d.nights, d.year];
     });
     var nightsGroup = countryDim.group();
     var minNights = countryDim.bottom(1)[0].year;
     var maxNights = countryDim.top(1)[0].year;
-    
+
     dc.scatterPlot("#scatter1")
         .width(800)
         .height(400)
@@ -188,31 +180,31 @@ function nights_stayed_per_country(ndx){
 }
 
 // function visits_per_country1(ndx) {
-        
-        
+
+
 //         var visit_dim = ndx.dimension(dc.pluck('visits'));
-        
+
 //         var min_visited = visit_dim.bottom(1)[0].visits;
 //         var max_visited = visit_dim.top(1)[0].visits;
-        
+
 //         var london_dim = ndx.dimension(function (d) {
 //             return [d.visits, d.spend, d.market, d.year, d.quarter, d.purpose];
 //         });
-        
+
 //         var tradeColors = d3.scale.ordinal()
 //             .domain(["q1", "q2", "q3", "q4"])
 //             .range(["red", "green", "blue", "purple", "yellow"]);
 
 
 //         var london_group = london_dim.group();
-        
+
 //         var subChart = function(c) {
 //             return dc.scatterPlot(c)
 //                         .symbolSize(4)
 //                         .highlightedSize(10);
 //         };
 
-        
+
 //         var chart = dc.seriesChart("#scatter2");
 //         chart
 //         .width(770)
@@ -244,7 +236,7 @@ function nights_stayed_per_country(ndx){
 //         dc.renderAll();
 //     }
 
-function visits_per_country(ndx){
+function visits_per_country(ndx) {
     var countryDim = ndx.dimension(dc.pluck('market'));
     var group = countryDim.group();
 
@@ -262,15 +254,15 @@ function visits_per_country(ndx){
 }
 
 // function visits_per_year(ndx) {
-    
+
 //     var countryDim = ndx.dimension(dc.pluck('year'));
-    
+
 //     var visits_dim = ndx.dimension(function (d) {
 //             return [d.visits, d.spend, d.market, d.year, d.quarter, d.purpose];
 //         });
-    
+
 //     var group = countryDim.group();
-    
+
 //     dc.lineChart("#reason1")
 //         .width(1600)
 //         .height(200)
