@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="static/css/dc.min.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -24,10 +26,10 @@
 
 <body>
     <!-- This container contains the menu selector and coding to allow the user to refresh the charts and menu -->
-    <div class="container">
+    <div class="size container col-sm-3">
         <div class="row">
             <div class="card col-xs-12 col-sm-6">
-                <div class="card-body">
+                <div class="card">
                     <div id="selectMenu"></div>
                     <div id="refresh">
                         <a href="javascript:dc.filterAll(); dc.renderAll();">
@@ -39,7 +41,7 @@
         </div>
     </div>
     <!-- This container contains a bar-chart showing how many people arrived in london by what method of transport used-->
-    <div class="container">
+    <div class="size container col-sm-3">
         <div class="row">
             <div class="card col-xs-12 col-sm-6">
                 <div class="card-body">
@@ -47,12 +49,16 @@
                     <div id="reason"></div>
                 </div>
             </div>
+        </div>
+    </div>
     <!-- This container is used to show the total spent amount-->
-    <div class="container">
+    <div class="size container col-sm-3">
         <div class="row">
             <div class="card col-xs-12 col-sm-6">
                 <div class="card-body">
-                    <div id="spent"><h4> Total Spent: <h4></div>
+                    <div id="spent">
+                        <h4> Total Spent: <h4>
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,7 +68,9 @@
         <div class="row">
             <div class="card col-xs-12 col-sm-6">
                 <div class="card-body">
-                    <div id="visits"> <h4>Total Visits: <h4></div>
+                    <div id="visits">
+                        <h4>Total Visits: <h4>
+                    </div>
                 </div>
             </div>
         </div>
@@ -111,7 +119,6 @@
             </div>
         </div>
     </div>
-    
     <div class="container">
         <div class="row">
             <div class="card col-xs-12 col-sm-6">
@@ -133,7 +140,7 @@
             </div>
         </div>
     </div>
-    
+
     <div id="reason1"></div>
 
 
