@@ -1,11 +1,3 @@
-#reason .x.axis text {
-    text-anchor: end !important;
-    transform: rotate(-90deg);
-    font-size: small;
-    margin-left: 0;
-    padding-left: 0;
-}
-
 #market .x.axis text {
     text-anchor: end !important;
     transform: rotate(-90deg);
