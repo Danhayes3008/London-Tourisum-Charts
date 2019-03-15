@@ -18,9 +18,61 @@
 
 /*this section is for setting the size of the containers*/
 
+.container-size{
+    margin: 0;
+    padding:0;
+    width:100%;
+    
+}
+
 .size{
     margin: 0;
     padding:0;
-    width:50%;
+    width:25%;
+    border: solid 1px;
+}
+
+.selectMenu-size{
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding:0;
+    width:25%;
+    height:40%;
+    border: solid 1px;
+}
+
+.reason-size{
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding:0;
+    width:25%;
+    height:40%;
+    border: solid 1px;
+}
+
+.spend-size{
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding:0;
+    width:25%;
+    height:40%;
+    border: solid 1px;
+    text-align: center;
+}
+
+.visits-size{
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding:0;
+    width:25%;
+    height:10%;
     border: solid 1px;
 }
