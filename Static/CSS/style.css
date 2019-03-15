@@ -28,8 +28,8 @@
 .size{
     margin: 0;
     padding:0;
-    width:25%;
-    border: solid 1px;
+    width:100%;
+    
 }
 
 .selectMenu-size{
@@ -73,6 +73,72 @@
     margin-bottom: 1%;
     padding:0;
     width:25%;
+    height:10%;
+    border: solid 1px;
+}
+
+.arrival-size{
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding:0;
+    width:25%;
+    height:10%;
+    border: solid 1px;
+}
+
+.country-size{
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding:0;
+    width:25%;
+    height:10%;
+    border: solid 1px;
+}
+
+.pie-spend-size{
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding:0;
+    width:25%;
+    height:10%;
+    border: solid 1px;
+}
+
+.scatter1-size{
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding:0;
+    width:25%;
+    height:10%;
+    border: solid 1px;
+}
+
+.scatter2-size{
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding:0;
+    width:25%;
+    height:10%;
+    border: solid 1px;
+}
+
+.market-size{
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding:0;
+    width:75%;
     height:10%;
     border: solid 1px;
 }
