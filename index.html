@@ -27,108 +27,121 @@
 <body>
     <div class="container-size container">
         <div class="row">
-            <!-- This container contains the menu selector and coding to allow the user to refresh the charts and menu -->
-            <div class="selectMenu-size container col-sm-3">
+            <div class="container">
                 <div class="row">
-                    <div class="card col-xs-12 col-sm-6">
-                        <div class="card">
-                            <div id="selectMenu"></div>
-                            <div id="refresh">
-                                <a href="javascript:dc.filterAll(); dc.renderAll();">
+                    <!-- This container contains the menu selector and coding to allow the user to refresh the charts and menu -->
+                    <div class="selectMenu-size container col-sm-3">
+                        <div class="row">
+                            <div class="card col-xs-12 col-sm-6">
+                                <div class="card">
+                                    <div id="selectMenu"></div>
+                                    <div id="refresh">
+                                        <a href="javascript:dc.filterAll(); dc.renderAll();">
                 Reset
             </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- This container contains a bar-chart showing how many people arrived in london by what method of transport used-->
-            <div class="reason-size container col-sm-3">
-                <div class="row">
-                    <div class="card col-xs-12 col-sm-6">
-                        <div class="card-body">
-                            <h4 class="card-title">Method of arrival chart</h4>
-                            <div id="reason"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- This container is used to show the total spent amount-->
-            <div class="spend-size container col-sm-3">
-                <div class="row">
-                    <div class="card col-xs-12 col-sm-6">
-                        <div class="card-body">
-                            <div id="spent">
-                                <h4> Total Spent:
-                                    <h4>
+                    <!-- This container contains a bar-chart showing how many people arrived in london by what method of transport used-->
+                    <div class="reason-size container col-sm-3">
+                        <div class="row">
+                            <div class="card col-xs-12 col-sm-6">
+                                <div class="card-body">
+                                    <h4 class="card-title">Method of arrival chart</h4>
+                                    <div id="reason"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- This container is used to show the total visits london has had-->
-            <div class="visits-size container col-sm-3">
-                <div class="row">
-                    <div class="card col-xs-12 col-sm-3">
-                        <div class="card-body">
-                            <div id="visits">
-                                <h4>Total Visits:
-                                    <h4>
+                    <!-- This container is used to show the total spent amount-->
+                    <div class="spend-size container col-sm-3">
+                        <div class="row">
+                            <div class="card col-xs-12 col-sm-6">
+                                <div class="card-body">
+                                    <div id="spent">
+                                        <h4> Total Spent:
+                                            <h4>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
-            <!-- This container contains a pie-chart showing how many people arrived in london by what method of transport used-->
-            <div class="size container col-sm-3">
+            <div class="container">
                 <div class="row">
-                    <div class="card col-xs-12 col-sm-3">
-                        <div class="card-body">
-                            <h4>Method of entry to london</h4>
-                            <div id="arrival"></div>
+                    <!-- This container is used to show the total visits london has had-->
+                    <div class="visits-size container col-sm-3">
+                        <div class="row">
+                            <div class="card col-xs-12 col-sm-3">
+                                <div class="card-body">
+                                    <div id="visits">
+                                        <h4>Total Visits:
+                                            <h4>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- This container contains a pie-chart showing total for the reason of visit-->
-            <div class="size container col-sm-3">
-                <div class="row">
-                    <div class="card col-xs-12 col-sm-3">
-                        <div class="card-body">
-                            <h4>Total visits per country</h4>
-                            <div id="country"></div>
+                    <!-- This container contains a pie-chart showing how many people arrived in london by what method of transport used-->
+                    <div class="size container col-sm-3">
+                        <div class="row">
+                            <div class="card col-xs-12 col-sm-3">
+                                <div class="card-body">
+                                    <h4>Method of entry to london</h4>
+                                    <div id="arrival"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- This container contains a pie-chart showing how many nights spent in london-->
-            <div class="size container col-sm-3">
-                <div class="row">
-                    <div class="card col-xs-12 col-sm-3">
-                        <div class="card-body">
-                            <h4>spend per year</h4>
-                            <div id="pie-spend"></div>
+                    <div class="container">
+                        <div class="row">
+                            <!-- This container contains a pie-chart showing total for the reason of visit-->
+                            <div class="size container col-sm-3">
+                                <div class="row">
+                                    <div class="card col-xs-12 col-sm-3">
+                                        <div class="card-body">
+                                            <h4>Total visits per country</h4>
+                                            <div id="country"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- This container contains a series-chart showing how many people visited per reason for visiting london-->
-            <div class="size container col-sm-3">
-                <div class="row">
-                    <div class="card col-xs-12 col-sm-6">
-                        <div class="card-body">
-                            <h4>Nights stayed scatter chart</h4>
-                            <div id="scatter1"></div>
+                    <!-- This container contains a pie-chart showing how many nights spent in london-->
+                    <div class="size container col-sm-3">
+                        <div class="row">
+                            <div class="card col-xs-12 col-sm-3">
+                                <div class="card-body">
+                                    <h4>spend per year</h4>
+                                    <div id="pie-spend"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="size container col-sm-3">
-                <div class="row">
-                    <div class="card col-xs-12 col-sm-6">
-                        <div class="card-body">
-                            <h4>visits per country scatter chart</h4>
-                            <div id="scatter2"></div>
+                    <!-- This container contains a series-chart showing how many people visited per reason for visiting london-->
+                    <div class="size container col-sm-3">
+                        <div class="row">
+                            <div class="card col-xs-12 col-sm-6">
+                                <div class="card-body">
+                                    <h4>Nights stayed scatter chart</h4>
+                                    <div id="scatter1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="size container col-sm-3">
+                        <div class="row">
+                            <div class="card col-xs-12 col-sm-6">
+                                <div class="card-body">
+                                    <h4>visits per country scatter chart</h4>
+                                    <div id="scatter2"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
