@@ -1,3 +1,8 @@
+body{
+    background-color: #0012;
+    margin-left: 4%
+}
+
 /*this section is for dealing with the charts styling*/
 
 #market .x.axis text {
@@ -21,7 +26,6 @@
 .container-size{
     margin: 0;
     padding:0;
-    width:100%;
     
 }
 
@@ -38,7 +42,7 @@
     margin-top: 1%;
     margin-bottom: 1%;
     padding:0;
-    width:25%;
+    width:20em;
     height:40%;
     border: solid 1px;
 }
@@ -49,7 +53,7 @@
     margin-top: 1%;
     margin-bottom: 1%;
     padding:0;
-    width:25%;
+    width:50em;
     height:40%;
     border: solid 1px;
 }
@@ -60,7 +64,7 @@
     margin-top: 1%;
     margin-bottom: 1%;
     padding:0;
-    width:25%;
+
     height:40%;
     border: solid 1px;
     text-align: center;
@@ -72,7 +76,7 @@
     margin-top: 1%;
     margin-bottom: 1%;
     padding:0;
-    width:25%;
+
     height:10%;
     border: solid 1px;
 }
@@ -83,8 +87,6 @@
     margin-top: 1%;
     margin-bottom: 1%;
     padding:0;
-    width:25%;
-    height:10%;
     border: solid 1px;
 }
 
@@ -94,8 +96,6 @@
     margin-top: 1%;
     margin-bottom: 1%;
     padding:0;
-    width:25%;
-    height:10%;
     border: solid 1px;
 }
 
@@ -105,8 +105,6 @@
     margin-top: 1%;
     margin-bottom: 1%;
     padding:0;
-    width:25%;
-    height:10%;
     border: solid 1px;
 }
 
@@ -116,7 +114,7 @@
     margin-top: 1%;
     margin-bottom: 1%;
     padding:0;
-    width:25%;
+
     height:10%;
     border: solid 1px;
 }
@@ -127,7 +125,7 @@
     margin-top: 1%;
     margin-bottom: 1%;
     padding:0;
-    width:25%;
+
     height:10%;
     border: solid 1px;
 }
@@ -138,7 +136,6 @@
     margin-top: 1%;
     margin-bottom: 1%;
     padding:0;
-    width:75%;
     height:10%;
     border: solid 1px;
 }
