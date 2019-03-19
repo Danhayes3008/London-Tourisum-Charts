@@ -3,6 +3,11 @@ body{
     margin-left: 4%
 }
 
+.card{
+    padding:0;
+    width:100%;
+}
+
 /*this section is for dealing with the charts styling*/
 
 #market .x.axis text {
@@ -42,8 +47,8 @@ body{
     margin-top: 1%;
     margin-bottom: 1%;
     padding:0;
-    width:20em;
-    height:40%;
+    width:105%;
+    height:100%;
     border: solid 1px;
 }
 
@@ -53,8 +58,8 @@ body{
     margin-top: 1%;
     margin-bottom: 1%;
     padding:0;
-    width:50em;
-    height:40%;
+    width:100%;
+    height:100%%;
     border: solid 1px;
 }
 
@@ -64,8 +69,8 @@ body{
     margin-top: 1%;
     margin-bottom: 1%;
     padding:0;
-
-    height:40%;
+    width: 100%;
+    height:100%;
     border: solid 1px;
     text-align: center;
 }
