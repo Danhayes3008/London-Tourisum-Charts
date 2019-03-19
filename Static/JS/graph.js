@@ -1,8 +1,11 @@
+/*global queue*/
 queue()
+/*global d3*/
     .defer(d3.csv, "Static/Data/international-visitors-london.csv")
     .await(makeGraphs);
     
 function makeGraphs(error, londonData){
+    /*global crossfilter*/
     var ndx = crossfilter(londonData);
     
     londonData.forEach(function(d) {
@@ -17,7 +20,7 @@ function makeGraphs(error, londonData){
         d.sample = parseInt(d.sample);
         d.area = parseInt(d.area);
 
-    })
+    });
     
     show_selector(ndx);
     show_total_spent(ndx);
@@ -32,7 +35,7 @@ function makeGraphs(error, londonData){
     // visits_per_year(ndx);
 
 
-
+/*global dc*/
     dc.renderAll();
 }
 
@@ -45,7 +48,6 @@ function show_selector(ndx) {
         .dimension(countryDim)
         .group(group);
 }
-
 
 function show_total_spent(ndx) {
     var totalSpend = ndx.groupAll().reduce(
