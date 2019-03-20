@@ -273,7 +273,7 @@ function visits_per_country(ndx) {
     var group = countryDim.group();
 
     dc.barChart("#market")
-        .width(1600)
+        .width(1100)
         .height(200)
         .margins({ top: 10, right: 50, bottom: 40, left: 80 })
         .dimension(countryDim)
