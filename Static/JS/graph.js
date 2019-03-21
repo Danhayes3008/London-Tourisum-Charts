@@ -32,10 +32,8 @@ function makeGraphs(error, londonData){
     nights_stayed_per_country(ndx);
     visits_per_country(ndx);
     visits_per_country1(ndx);
-    // visits_per_year(ndx);
-
-
-/*global dc*/
+    
+    /*global dc*/
     dc.renderAll();
 }
 
@@ -209,60 +207,54 @@ function nights_stayed_per_country(ndx) {
 
 function visits_per_country1(ndx) {
 
-
-        var visit_dim = ndx.dimension(dc.pluck('visits'));
-
-        var min_visited = visit_dim.bottom(1)[0].visits;
-        var max_visited = visit_dim.top(1)[0].visits;
-
-        var london_dim = ndx.dimension(function (d) {
-            return [d.visits, d.spend, d.market, d.year, d.quarter, d.purpose];
-        });
-
-        var tradeColors = d3.scale.ordinal()
-            .domain(["q1", "q2", "q3", "q4"])
-            .range(["red", "green", "blue", "purple", "yellow"]);
-
-
-        var london_group = london_dim.group();
-
-        var subChart = function(c) {
-            return dc.scatterPlot(c)
-                        .symbolSize(4)
-                        .highlightedSize(10);
-        };
-
-
-        var chart = dc.seriesChart("#scatter2");
-        chart
-        .width(700)
-        .height(480)
-        .chart(subChart)
-        .x(d3.time.scale().domain([min_visited, max_visited]))
-        .brushOn(false)
-        .clipPadding(10)
-        .yAxisLabel("year")
-        .xAxisLabel("visits")
-        .elasticY(true)
-        .dimension(london_dim)
-        .group(london_group)
-        .mouseZoomable(true)
-        .shareTitle(true) // allow default scatter title to work
-        .seriesAccessor(function(d) {return d.key[5];})
-        .keyAccessor(function(d) {return d.key[0];})
-        .valueAccessor(function(d) {return +d.key[3];})
-        .colorAccessor(function (d) {
-            return d.key[3];
-        })
-        .colors(tradeColors)
-
-        .legend(dc.legend().x(700).y(50).itemHeight(13).gap(5).horizontal(1).legendWidth(70).itemWidth(70));
-
-        chart.margins().left += 20;
-        chart.margins().bottom += 20;
-        chart.margins().right = 50;
-        dc.renderAll();
+    function modeArrivedBy (dimension, mode) {
+        return dimension.group().reduce(
+            function (p, v) {
+                p.total++;
+                if(v.purpose == mode) {
+                    p.match++;
+                }
+                return p;
+            },
+            function (p, v) {
+                p.total--;
+                if(v.purpose == mode) {
+                    p.match--;
+                }
+                return p;
+            },
+            function () {
+                return {total: 0, match: 0};
+            }
+        );
     }
+    
+    var dim = ndx.dimension(dc.pluck("purpose"));
+    var tunnelOfArrival = modeArrivedBy(dim, "Tunnel");
+    var airOfArrival = modeArrivedBy(dim, "Air");
+    var seaOfArrival = modeArrivedBy(dim, "Sea");
+    
+    console.log(tunnelOfArrival.all());
+    
+    dc.barChart("#scatter2")
+        .width(400)
+        .height(300)
+        .dimension(dim)
+        .group(tunnelOfArrival, "Tunnel")
+        .stack(airOfArrival, "Air")
+        .stack(seaOfArrival, "Sea")
+        .valueAccessor(function(d) {
+            if(d.value.total > 0) {
+                return (d.value.match / d.value.total) * 100;
+            } else {
+                return 0;
+            }
+        })
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .legend(dc.legend().x(320).y(20).itemHeight(15).gap(5))
+        .margins({top: 10, right: 100, bottom: 30, left: 30});
+}
 
 function visits_per_country(ndx) {
     var countryDim = ndx.dimension(dc.pluck('market'));
