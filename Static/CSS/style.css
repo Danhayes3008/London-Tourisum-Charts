@@ -1,5 +1,8 @@
-body{
+body {
     background-color: #D9F6FC;
+    font-family: 'Courgette', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .card{
@@ -93,7 +96,7 @@ body{
     border: solid 1px;
 }
 
-.scatter2-size{
+.VPC-size{
     /*margin:1%;*/
     padding:0;
     width:100%;
