@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -19,53 +18,36 @@
     <script type="text/javascript" src="Static/JS/dc.min.js"></script>
     <script type="text/javascript" src="Static/JS/queue.min.js"></script>
     <script type="text/javascript" src="Static/JS/graph.js"></script>
-    <script type="text/javascript" src="Static/JS/line.js"></script>
 
 </head>
-
 <body>
-    <div class="container-size container">
+    <div class="container">
         <div class="row">
-            <div class="size container">
-                <div class="row">
-                    <!--This container contains the menu selector and coding to allow the user to refresh the charts and menu -->
-                    <div class="selectMenu-size container col-sm-4">
-                        <div class="row">
-                            <div class="card col-xs-12 col-sm-6">
-                                <div class="card">
-                                    <div id="selectMenu"></div>
-                                    <div id="refresh">
-                                        <a href="javascript:dc.filterAll(); dc.renderAll();">
-                Reset
-            </a>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="container col-sm-3">
+                <div class="row spend-size">
+                    <div class="card">
+                        <h4 class="text-center">Total Spend</h4>
+                        <div id="spent"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container col-sm-3">
+                <div class="row selectMenu-size">
+                    <div class="card">
+                        <div class="padding1" id="selectMenu"></div>
+                        <div class="button" id="refresh">
+                            <button>
+                            <a href="javascript:dc.filterAll(); dc.renderAll();">Reset</a>
+                            </button>
                         </div>
                     </div>
-                    <!--This container contains a bar-chart showing how many people arrived in london by what method of transport used-->
-                    <div class="reason-size container col-sm-4">
-                        <div class="row">
-                            <div class="card col-xs-12 col-sm-6">
-                                <div class="card-body">
-                                    <h4 class="card-title">Method of arrival chart</h4>
-                                    <div id="reason"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--This container is used to show the total spent amount-->
-                    <div class="spend-size container col-sm-4">
-                        <div class="row">
-                            <div class="card col-xs-12 col-sm-6">
-                                <div class="card-body">
-                                    <div id="spent">
-                                        <h4> Total Spent:
-                                            <h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="container col-sm-3">
+                <div class="row visits-size">
+                    <div class="card">
+                        <h4 class="text-center">Total Visited</h4>
+                        <div id="visits"></div>
                     </div>
                 </div>
             </div>
@@ -73,105 +55,55 @@
     </div>
     <div class="container">
         <div class="row">
-            <!--This container is used to show the total visits london has had-->
-            <div class="visits-size container col-sm-4">
-                <div class="row">
-                    <div class="card col-xs-12 col-sm-4">
-                        <div class="card-body">
-                            <h4>Total visits:</h4>
-                            <div id="visits"></div>
-                        </div>
+            <div class="container col-sm-7">
+                <div class="row reason-size">
+                    <div class="card">
+                        <h1 class="text-center">Arrival bar chart</h1>
+                        <div id="reason"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container col-sm-4">
+                <div class="row arrival-size">
+                    <div class="card">
+                        <h1 class="text-center">Arrival pie-chart</h1>
+                        <div id="arrival"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div class="container col-xs-12 col-sm-4">
-    </div class="row">
-    <!--This container contains a pie-chart showing how many people arrived in london by what method of transport used-->
-    <div class="arrival-size card">
+    <div class="container">
         <div class="row">
-            <h4>Method of entry to london</h4>
-            <div id="arrival"></div>
-        </div>
-    </div>
-    </div>
-    </div>
-
-    <div class="container-size container col-xs-12 col-sm-4">
-        <div class="row">
-            <!--This container contains a pie-chart showing total for the reason of visit-->
-            <div class="country-size card">
-                <div class="row">
-                    <h4>Total visits per country</h4>
-                    <div id="country"></div>
+            <div class="container col-sm-8">
+                <div class="row scatter2-size">
+                    <div class="card">
+                        <h1 class="text-center">Arrival pie-chart</h1>
+                        <div id="scatter2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container col-sm-4">
+                <div class="row country-size">
+                    <div class="card">
+                        <h1 class="text-center">country pie-chart</h1>
+                        <div id="country"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-size container col-xs-12 col-sm-4">
+    <div class="container">
         <div class="row">
-            <!--This container contains a pie-chart showing how many nights spent in london-->
-            <div class="pie-spend-size card col-sm-3">
-                <div class="row">
-                    <h4>spend per year</h4>
-                    <div id="pie-spend"></div>
+            <div class="container">
+                <div class="row market-size">
+                    <div class="card">
+                        <h1 class="text-center">country of origin</h1>
+                        <div id="market"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--This container contains a series-chart showing how many people visited per reason for visiting london-->
-    <div class="scatter1-size container col-sm-4">
-        <div class="row">
-            <div class="card col-xs-12 col-sm-6">
-                <div class="card-body">
-                    <h4>Nights stayed scatter chart</h4>
-                    <div id="scatter1"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="scatter2-size container col-sm-4">
-        <div class="row">
-            <div class="card col-xs-12 col-sm-6">
-                <div class="card-body">
-                    <h4>visits per country scatter chart</h4>
-                    <div id="scatter2"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--This container contains a bar-chart showing how many people visited london by contry of origin-->
-    <div class="market-size container col-sm-12">
-        <div class="row">
-            <div class="card col-xs-12 col-sm-6">
-                <div class="card-body">
-                    <h4>Visits per country</h4>
-                    <div id="market"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--<div class="container-fluid">-->
-    <!--    <div class="row">-->
-    <!--        <div class="arrival-size card col-xs-12 col-sm-6">-->
-    <!--            <div class="card-body">-->
-    <!--                <h4 class="card-title">Spend by Duration & Purpose of Visit</h4>-->
-    <!--                <div id="arrival"></div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--        <div class="country-size card col-xs-12 col-sm-6">-->
-    <!--            <div class="card-body">-->
-    <!--                <h4 class="card-title">Spend per Year per Quarter</h4>-->
-    <!--                <div id='market'></div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--</div>-->
-
-    <!--<div id="reason1"></div>-->
-
 </body>
-
 </html>
