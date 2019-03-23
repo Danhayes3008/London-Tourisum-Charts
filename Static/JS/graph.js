@@ -29,9 +29,8 @@ function makeGraphs(error, londonData){
     show_method_of_arrival(ndx);
     show_country_of_origin(ndx);
     show_visit_per_year(ndx);
-    nights_stayed_per_country(ndx);
     visits_per_country(ndx);
-    visits_per_country1(ndx);
+    Country_of_origin(ndx);
     
     /*global dc*/
     dc.renderAll();
@@ -173,39 +172,7 @@ function show_visit_per_year(ndx) {
         .colors(typeColors);
 }
 
-function nights_stayed_per_country(ndx) {
-    var countryColors = d3.scale.ordinal()
-        .domain([])
-        .range(["#0481BB", "#048AC9", "#069CE3"]);
-    var countryDim = ndx.dimension(dc.pluck("nights"));
-    var nDim = ndx.dimension(function(d) {
-        return [d.market, d.nights, d.year];
-    });
-    var nightsGroup = countryDim.group();
-    var minNights = countryDim.bottom(1)[0].year;
-    var maxNights = countryDim.top(1)[0].year;
-
-    dc.scatterPlot("#scatter1")
-        .width(800)
-        .height(400)
-        .x(d3.scale.linear().domain([minNights, maxNights]))
-        .brushOn(false)
-        .symbolSize(8)
-        .clipPadding(10)
-        .title(function(d) {
-            return d.key[1] + " stayed " + d.key[2];
-        })
-        .colorAccessor(function(d) {
-            return d.key[0];
-        })
-        .colors(countryColors)
-        .dimension(countryDim)
-        .group(nightsGroup)
-        .margins({ top: 10, right: 50, bottom: 75, left: 75 })
-        .xAxis().ticks(10);
-}
-
-function visits_per_country1(ndx) {
+function visits_per_country(ndx) {
 
     function modeArrivedBy (dimension, mode) {
         return dimension.group().reduce(
@@ -236,7 +203,7 @@ function visits_per_country1(ndx) {
     
     console.log(tunnelOfArrival.all());
     
-    dc.barChart("#scatter2")
+    dc.barChart("#VPC")
         .width(400)
         .height(300)
         .dimension(dim)
@@ -256,7 +223,7 @@ function visits_per_country1(ndx) {
         .margins({top: 10, right: 100, bottom: 30, left: 30});
 }
 
-function visits_per_country(ndx) {
+function Country_of_origin(ndx) {
     var countryDim = ndx.dimension(dc.pluck('market'));
     var group = countryDim.group();
 
@@ -272,27 +239,3 @@ function visits_per_country(ndx) {
         .xAxisLabel("Visits per country")
         .yAxis().ticks(5);
 }
-
-// function visits_per_year(ndx) {
-
-//     var countryDim = ndx.dimension(dc.pluck('year'));
-
-//     var visits_dim = ndx.dimension(function (d) {
-//             return [d.visits, d.spend, d.market, d.year, d.quarter, d.purpose];
-//         });
-
-//     var group = countryDim.group();
-
-//     dc.lineChart("#reason1")
-//         .width(1600)
-//         .height(200)
-//         .margins({ top: 10, right: 50, bottom: 40, left: 80 })
-//         .dimension(visits_dim)
-//         .group(group)
-//         .transitionDuration(500)
-//         .x(d3.scale.ordinal())
-//         .xUnits(dc.units.ordinal)
-//         .xAxisLabel("Visits per country")
-//         .yAxis().ticks(5)
-//         .keyAccessor(function(d) {return d.key[0];});
-// }
