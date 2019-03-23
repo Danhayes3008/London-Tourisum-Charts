@@ -1,5 +1,5 @@
 body{
-    background-color: #0012;
+    background-color: #D9F6FC;
 }
 
 .card{
@@ -33,12 +33,6 @@ body{
     
 }
 
-.size{
-    margin: 0;
-    padding:0;
-    width:100%;
-}
-
 .button{
     padding-left:40%;
 
@@ -57,7 +51,7 @@ body{
 }
 
 .reason-size{
-    margin:1%;
+    /*margin:1%;*/
     padding:0;
     width:100%;
     height:100%;
@@ -83,33 +77,19 @@ body{
 }
 
 .arrival-size{
-    margin:1%;
+    /*margin:1%;*/
     padding:0;
     border: solid 1px;
 }
 
 .country-size{
-    margin:1%;
+    /*margin:1%;*/
     padding:0;
-    border: solid 1px;
-}
-
-.pie-spend-size{
-    margin:1%;
-    padding:0;
-    border: solid 1px;
-}
-
-.scatter1-size{
-    margin:1%;
-    padding:0;
-
-    height:10%;
     border: solid 1px;
 }
 
 .scatter2-size{
-    margin:1%;
+    /*margin:1%;*/
     padding:0;
     width:100%;
     height:100%;
