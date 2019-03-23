@@ -130,8 +130,8 @@ function show_method_of_arrival(ndx) {
     var methodOfArrival = arrivalDim.group();
 
     dc.pieChart("#arrival")
-        .height(250)
-        .radius(100)
+        .height(400)
+        .radius(200)
         .transitionDuration(500)
         .dimension(arrivalDim)
         .group(methodOfArrival)
@@ -147,8 +147,8 @@ function show_country_of_origin(ndx) {
     var countryOfOrigin = countryDim.group();
 
     dc.pieChart("#country")
-        .height(250)
-        .radius(100)
+        .height(350)
+        .radius(200)
         .transitionDuration(500)
         .dimension(countryDim)
         .group(countryOfOrigin)
