@@ -211,14 +211,14 @@ function visits_per_country1(ndx) {
         return dimension.group().reduce(
             function (p, v) {
                 p.total++;
-                if(v.purpose == mode) {
+                if(v.mode == mode) {
                     p.match++;
                 }
                 return p;
             },
             function (p, v) {
                 p.total--;
-                if(v.purpose == mode) {
+                if(v.mode == mode) {
                     p.match--;
                 }
                 return p;
@@ -230,8 +230,8 @@ function visits_per_country1(ndx) {
     }
     
     var dim = ndx.dimension(dc.pluck("purpose"));
-    var tunnelOfArrival = modeArrivedBy(dim, "Tunnel");
-    var airOfArrival = modeArrivedBy(dim, "Air");
+    var tunnelOfArrival = modeArrivedBy(dim, "Air");
+    var airOfArrival = modeArrivedBy(dim, "Tunnel");
     var seaOfArrival = modeArrivedBy(dim, "Sea");
     
     console.log(tunnelOfArrival.all());
@@ -240,8 +240,8 @@ function visits_per_country1(ndx) {
         .width(400)
         .height(300)
         .dimension(dim)
-        .group(tunnelOfArrival, "Tunnel")
-        .stack(airOfArrival, "Air")
+        .group(tunnelOfArrival, "Air")
+        .stack(airOfArrival, "Tunnel")
         .stack(seaOfArrival, "Sea")
         .valueAccessor(function(d) {
             if(d.value.total > 0) {
