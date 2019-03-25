@@ -23,6 +23,10 @@ img{
 h1{
     padding-top: 5%;
 }
+
+#VPC{
+    padding-left:15%;
+}
 /*this section is for dealing with the charts styling*/
 
 #market .x.axis text {
