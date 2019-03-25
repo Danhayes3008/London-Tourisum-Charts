@@ -15,6 +15,14 @@ body {
     background-color: #C8E9FB;
 }
 
+img{
+    padding-top: 5%;
+    width:100%;
+}
+
+h1{
+    padding-top: 5%;
+}
 /*this section is for dealing with the charts styling*/
 
 #market .x.axis text {
