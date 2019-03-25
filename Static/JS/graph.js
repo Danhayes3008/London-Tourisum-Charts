@@ -204,8 +204,8 @@ function visits_per_country(ndx) {
     console.log(tunnelOfArrival.all());
     
     dc.barChart("#VPC")
-        .width(400)
-        .height(300)
+        .width(500)
+        .height(400)
         .dimension(dim)
         .group(tunnelOfArrival, "Air")
         .stack(airOfArrival, "Tunnel")
@@ -219,8 +219,8 @@ function visits_per_country(ndx) {
         })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .legend(dc.legend().x(320).y(20).itemHeight(15).gap(5))
-        .margins({top: 10, right: 100, bottom: 30, left: 30});
+        .legend(dc.legend().x(430).y(20).itemHeight(15).gap(5))
+        .margins({top: 10, right: 100, bottom: 30, left: 50});
 }
 
 function Country_of_origin(ndx) {
