@@ -12,3 +12,6 @@ and comments that i used when i pushed them to github.
 contrabutions:
 
 I received help from joWings on the slack chat room with regards to the reset element that allows me to reset all charts and the select menu.
+
+
+image is from Wikipidia
