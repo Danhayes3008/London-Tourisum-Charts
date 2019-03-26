@@ -252,6 +252,5 @@ function Country_of_origin(ndx) {
         .transitionDuration(500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .xAxisLabel("Visits per country")
         .yAxis().ticks(5);
 }
