@@ -27,6 +27,15 @@ h1{
 #VPC{
     padding-left:15%;
 }
+
+.btn{
+    border: solid 1px grey;
+    margin-top: 4%;
+}
+
+.select{
+    margin-top:10%;
+}
 /*this section is for dealing with the charts styling*/
 
 #market .x.axis text {
@@ -54,12 +63,13 @@ h1{
 }
 
 .button{
-    padding-left:40%;
-
+    padding-left:10%;
+    width: 200px;
 }
 
 .padding1{
     padding-top: 1%;
+    padding-left:2%;
 }
 
 .selectMenu-size{
