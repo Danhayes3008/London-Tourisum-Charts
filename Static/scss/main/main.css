@@ -64,4 +64,10 @@
   height: 100%;
   border: solid 1px; }
 
+body {
+  background-color: #D7FABB;
+  font-family: 'Courgette', cursive;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif; }
+
 /*# sourceMappingURL=main.css.map */
