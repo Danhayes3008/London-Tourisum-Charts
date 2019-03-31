@@ -57,6 +57,10 @@ a{
     margin-left: 0;
     padding-left: 0;
 }
+#country{
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
 
 /*this section is for setting the size of the containers*/
 
@@ -142,4 +146,7 @@ a{
 
 .mar1{
     margin-top: 2%;
+}
+.mar2{
+    margin-bottom: 5%;
 }
