@@ -77,6 +77,10 @@ footer {
   background-color: grey;
   font-size: larger; }
 
+img {
+  padding-top: 5%;
+  width: 100%; }
+
 body {
   background-color: #D7FABB;
   font-family: 'Courgette', cursive;
