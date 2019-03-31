@@ -2,7 +2,9 @@
 @import "../variables/media-queries.scss";
 
 
-@import "../components/chart-size.scss";
+@import "../components/chart-size/chart-size.scss";
+@import "../components/cards/cards.scss";
+
 
 body {
     background-color: #D7FABB;
