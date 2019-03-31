@@ -152,8 +152,8 @@ function show_country_of_origin(ndx) {
     var countryOfOrigin = countryDim.group();
 
     dc.pieChart("#country")
-        .height(350)
-        .radius(200)
+        .height(400)
+        .radius(300)
         .transitionDuration(500)
         .dimension(countryDim)
         .group(countryOfOrigin)
