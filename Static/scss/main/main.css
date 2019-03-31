@@ -72,6 +72,11 @@
 .card-header {
   background-color: #C8E9FB; }
 
+footer {
+  padding-top: 1%;
+  background-color: grey;
+  font-size: larger; }
+
 body {
   background-color: #D7FABB;
   font-family: 'Courgette', cursive;
