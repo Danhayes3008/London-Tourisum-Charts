@@ -150,3 +150,9 @@ a{
 .mar2{
     margin-bottom: 5%;
 }
+
+footer{
+    padding-top: 1%;
+    background-color: grey;
+    font-size: larger;
+}
