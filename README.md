@@ -13,5 +13,7 @@ contrabutions:
 
 I received help from joWings on the slack chat room with regards to the reset element that allows me to reset all charts and the select menu.
 
+found an awnser to a problem on git hub. <a href="https://github.com/KoenDeMol">KoenDeMol responded to someone who had the same problem giving
+at solution which was to add ._rangeBandPadding(1) into the chart coding
 
 image is from Wikipidia
