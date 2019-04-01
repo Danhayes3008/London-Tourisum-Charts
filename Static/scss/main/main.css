@@ -81,6 +81,46 @@ img {
   padding-top: 5%;
   width: 100%; }
 
+#market .x.axis text {
+  text-anchor: end !important;
+  transform: rotate(-90deg);
+  font-size: small;
+  margin-left: 0;
+  padding-top: 5px; }
+
+#reason1 .x.axis text {
+  text-anchor: end !important;
+  transform: rotate(-90deg);
+  font-size: 100px;
+  margin-left: 0;
+  padding-left: 0; }
+
+#country {
+  padding-bottom: 5%;
+  padding-top: 5%; }
+
+#VPC {
+  padding-left: 15%; }
+
+h1 {
+  padding-top: 5%; }
+
+.btn {
+  border: solid 1px grey;
+  margin-top: 4%; }
+
+.select {
+  margin-top: 10%; }
+
+a {
+  color: black; }
+
+.mar1 {
+  margin-top: 2%; }
+
+.mar2 {
+  margin-bottom: 5%; }
+
 body {
   background-color: #D7FABB;
   font-family: 'Courgette', cursive;
