@@ -1,0 +1,19 @@
+#market .x.axis text {
+  text-anchor: end !important;
+  transform: rotate(-90deg);
+  font-size: small;
+  margin-left: 0;
+  padding-left: 0; }
+
+#reason1 .x.axis text {
+  text-anchor: end !important;
+  transform: rotate(-90deg);
+  font-size: small;
+  margin-left: 0;
+  padding-left: 0; }
+
+#country {
+  padding-bottom: 5%;
+  padding-top: 5%; }
+
+/*# sourceMappingURL=ids.css.map */
