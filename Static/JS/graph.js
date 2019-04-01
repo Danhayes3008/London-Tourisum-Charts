@@ -249,6 +249,7 @@ function Country_of_origin(ndx) {
         .margins({ top: 10, right: 50, bottom: 40, left: 80 })
         .dimension(countryDim)
         .group(group)
+        ._rangeBandPadding(2)
         .transitionDuration(500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
