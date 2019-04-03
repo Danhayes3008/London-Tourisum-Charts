@@ -6,6 +6,17 @@ h1 {
   margin-top: 4%;
   color: black; }
 
+.button {
+  width: 150px; }
+
+.padding1 {
+  padding-left: 2%; }
+
+.refresh {
+  padding-left: 20%;
+  padding-top: 5%;
+  width: 150px; }
+
 .select {
   margin-top: 10%; }
 
