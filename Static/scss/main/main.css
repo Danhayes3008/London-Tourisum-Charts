@@ -74,8 +74,9 @@
 
 footer {
   padding-top: 1%;
-  background-color: grey;
-  font-size: larger; }
+  background-color: #C8E9FB;
+  font-size: larger;
+  border-top: solid 1px #000000; }
 
 img {
   padding-top: 5%;
