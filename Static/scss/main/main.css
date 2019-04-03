@@ -2,14 +2,6 @@
   margin: 0;
   padding: 0; }
 
-.button {
-  padding-left: 20%;
-  padding-top: 5%;
-  width: 150px; }
-
-.padding1 {
-  padding-left: 2%; }
-
 .selectMenu-size {
   margin: 1%;
   padding: 0;
@@ -110,6 +102,17 @@ h1 {
   border: solid 1px grey;
   margin-top: 4%;
   color: black; }
+
+.button {
+  width: 150px; }
+
+.padding1 {
+  padding-left: 2%; }
+
+.refresh {
+  padding-left: 20%;
+  padding-top: 5%;
+  width: 150px; }
 
 .select {
   margin-top: 10%; }
