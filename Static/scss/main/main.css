@@ -109,6 +109,12 @@ h1 {
 .padding1 {
   padding-left: 2%; }
 
+.padding2 {
+  padding-top: 8%; }
+
+.padding3 {
+  padding-top: 3%; }
+
 .refresh {
   padding-left: 20%;
   padding-top: 5%;
@@ -125,6 +131,9 @@ a {
 
 .mar2 {
   margin-bottom: 5%; }
+
+.underline {
+  text-decoration: underline; }
 
 body {
   background-color: #D7FABB;
