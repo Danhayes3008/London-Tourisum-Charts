@@ -107,7 +107,7 @@ function show_total_visits(ndx){
 function show_reason_for_visit(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["Tunnel", "Sea", "Air"])
-        .range(["#B3DC81", "#85C850", "#74B044"]);
+        .range(["#71F25D", "#6CB4F3", "#F3936C", "#AD6CF3", "#F36CBA"]);
     var reasonDim = ndx.dimension(dc.pluck('mode'));
     var group = reasonDim.group();
 
@@ -130,7 +130,7 @@ function show_reason_for_visit(ndx) {
 function show_method_of_arrival(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["Tunnel", "Sea", "Air"])
-        .range(["#B3DC81", "#85C850", "#74B044"]);
+        .range(["#71F25D", "#6CB4F3", "#F3936C", "#AD6CF3", "#F36CBA"]);
     var arrivalDim = ndx.dimension(dc.pluck("mode"));
     var methodOfArrival = arrivalDim.group();
 
@@ -147,7 +147,7 @@ function show_method_of_arrival(ndx) {
 function show_country_of_origin(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["Business", "Holiday", "Study", "Miscellaneous", "VFR"])
-        .range(["#B3DC81", "#85C850", "#74B044", "#57AD13", "#519F14"]);
+        .range(["#71F25D", "#6CB4F3", "#F3936C", "#AD6CF3", "#F36CBA"]);
     var countryDim = ndx.dimension(dc.pluck("purpose"));
     var countryOfOrigin = countryDim.group();
 
@@ -164,7 +164,7 @@ function show_country_of_origin(ndx) {
 function show_visit_per_year(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["1-3 nights", "4-7 nights", "8-14 nights", "15+ nights"])
-        .range(["#0481BB", "#048AC9", "#069CE3"]);
+        .range(["#71F25D", "#6CB4F3", "#F3936C", "#AD6CF3", "#F36CBA"]);
     var countryDim = ndx.dimension(dc.pluck("dur_stay"));
     var countryOfOrigin = countryDim.group();
 
@@ -182,7 +182,7 @@ function visits_per_country(ndx) {
     
     var typeColors = d3.scale.ordinal()
         .domain(["Air", "Tunnel", "Sea"])
-        .range(["#B3DC81", "#85C850", "#74B044"])
+        .range(["#71F25D", "#6CB4F3", "#F3936C", "#AD6CF3", "#F36CBA"])
 
     function modeArrivedBy (dimension, mode) {
         return dimension.group().reduce(
@@ -236,22 +236,22 @@ function visits_per_country(ndx) {
 
 function Country_of_origin(ndx) {
     var typeColors = d3.scale.ordinal()
-        .domain(["country"])
-        .range(["#B3DC81", "#85C850", "#74B044"]);
+        .domain(["market"])
+        .range(["#71F25D", "#6CB4F3", "#F3936C", "#AD6CF3", "#F36CBA"]);
     var countryDim = ndx.dimension(dc.pluck('market'));
     var group = countryDim.group();
 
     dc.barChart("#market")
         .width(1100)
-        .height(200)
+        .height(500)
         .colorAccessor(function(d) { return d.key[0]; })
         .colors(typeColors)
-        .margins({ top: 10, right: 50, bottom: 40, left: 80 })
+        .margins({ top: 10, right: 80, bottom: 200, left: 80 })
         .dimension(countryDim)
         .group(group)
         ._rangeBandPadding(2)
         .transitionDuration(500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .yAxis().ticks(5);
+        .yAxis().ticks(9);
 }
