@@ -67,8 +67,9 @@ footer {
   border-top: solid 1px #000000; }
 
 img {
-  padding-top: 5%;
-  width: 100%; }
+  margin-top: 5%;
+  width: 100%;
+  border: solid 2px #000000; }
 
 #market .x.axis text {
   text-anchor: end !important;
