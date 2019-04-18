@@ -107,7 +107,7 @@ function show_total_visits(ndx){
 function show_reason_for_visit(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["Tunnel", "Sea", "Air"])
-        .range(["#71F25D", "#6CB4F3", "#F3936C", "#AD6CF3", "#F36CBA"]);
+        .range(["#0481BB", "#6CB4F3", "#F3936C", "#AD6CF3", "#F36CBA"]);
     var reasonDim = ndx.dimension(dc.pluck('mode'));
     var group = reasonDim.group();
 
@@ -130,7 +130,7 @@ function show_reason_for_visit(ndx) {
 function show_method_of_arrival(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["Tunnel", "Sea", "Air"])
-        .range(["#71F25D", "#6CB4F3", "#F3936C", "#AD6CF3", "#F36CBA"]);
+        .range(["#0481BB", "#6CB4F3", "#F3936C", "#AD6CF3", "#F36CBA"]);
     var arrivalDim = ndx.dimension(dc.pluck("mode"));
     var methodOfArrival = arrivalDim.group();
 
@@ -141,6 +141,11 @@ function show_method_of_arrival(ndx) {
         .dimension(arrivalDim)
         .group(methodOfArrival)
         .colorAccessor(function(d) { return d.key[0]; })
+        .on('pretransition', function(chart) {
+            chart.selectAll('text.pie-slice').text(function(d) {
+                return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%';
+            })
+        })
         .colors(typeColors);
 }
 
@@ -158,6 +163,11 @@ function show_country_of_origin(ndx) {
         .dimension(countryDim)
         .group(countryOfOrigin)
         .colorAccessor(function(d) { return d.key[0]; })
+        .on('pretransition', function(chart) {
+            chart.selectAll('text.pie-slice').text(function(d) {
+                return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%';
+            })
+        })
         .colors(typeColors);
 }
 
@@ -241,6 +251,8 @@ function Country_of_origin(ndx) {
     var countryDim = ndx.dimension(dc.pluck('market'));
     var group = countryDim.group();
 
+    console.log(group.all());
+
     dc.barChart("#market")
         .width(1100)
         .height(500)
@@ -254,4 +266,6 @@ function Country_of_origin(ndx) {
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .yAxis().ticks(9);
+
+
 }
