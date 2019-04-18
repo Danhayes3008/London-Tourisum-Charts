@@ -139,6 +139,12 @@ a {
 .underline {
   text-decoration: underline; }
 
+.text-right {
+  padding-right: 5%; }
+
+.retun-pad-btm {
+  padding-bottom: 3%; }
+
 body {
   background-color: #C1F5FB;
   font-family: 'Courgette', cursive;
