@@ -33,7 +33,9 @@ following changes to imrove the site:
 
 . total visited need to be more clearer as she didnt know what that was for.
 
-found an awnser to a problem on git hub. <a href="https://github.com/KoenDeMol">KoenDeMol responded to someone who had the same problem giving
+found an awnser to a problem on git hub. <a href="https://github.com/KoenDeMol">KoenDeMol</a> responded to someone who had the same problem giving
 at solution which was to add ._rangeBandPadding(1) into the chart coding
+
+found a way to add percentages into my piecharts acknowlagemnt for this bit of code goes to <a href="https://github.com/gordonwoodhull" target="_blank">Gordon Woodhull</a> on github.
 
 image is from Wikipidia
