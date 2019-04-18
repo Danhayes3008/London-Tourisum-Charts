@@ -96,12 +96,15 @@ img {
   padding-top: 2%;
   padding-bottom: 2%; }
 
+#top {
+  padding-right: 5%; }
+
 h1 {
   padding-top: 5%; }
 
 .btn {
   border: solid 1px grey;
-  margin-top: 154%;
+  margin-top: 15%;
   color: black; }
 
 .button {
