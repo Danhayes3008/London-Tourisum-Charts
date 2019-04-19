@@ -1,8 +1,16 @@
+// This queue() keeps all the JavaScript waiting until all the dashboard is loaded.
+
 /*global queue*/
 queue()
+
+// This section tells the JavaScript were the dataset is and to wait for the makeGraph function.
+
 /*global d3*/
     .defer(d3.csv, "Static/Data/international-visitors-london.csv")
     .await(makeGraphs);
+
+
+// This function is what creates all the charts.
     
 function makeGraphs(error, londonData){
     /*global crossfilter*/
@@ -36,6 +44,7 @@ function makeGraphs(error, londonData){
 }
 
 
+// This function creates the country selector.
 function showSelector(ndx) {
     var countryDim = ndx.dimension(dc.pluck('market'));
     var group = countryDim.group();
@@ -44,6 +53,8 @@ function showSelector(ndx) {
         .dimension(countryDim)
         .group(group);
 }
+
+// This function adds up all the amounts spent in the dataset and shows it on the dashboard.
 
 function showTotalSpent(ndx) {
     var totalSpend = ndx.groupAll().reduce(
@@ -74,6 +85,8 @@ function showTotalSpent(ndx) {
         .group(totalSpend);
 }
 
+// This function adds up all the visits to London in the dataset and displays it in the dashboard.
+
 function showTotalVisits(ndx){
     var totalVisits = ndx.groupAll().reduce(
         function(p, v) {
@@ -103,6 +116,8 @@ function showTotalVisits(ndx){
         .group(totalVisits);
 }
 
+// This function creates a bar-chart that shows how the visiters to london arrived.
+
 function showReasonForVisit(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["Tunnel", "Sea", "Air"])
@@ -126,6 +141,9 @@ function showReasonForVisit(ndx) {
         
 }
 
+// This function creates a pie-chart displaying how the visiters came to london, it also provides us a percentage of how many arrived per mode of
+// transport.
+
 function showMethodOfArrival(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["Tunnel", "Sea", "Air"])
@@ -148,6 +166,9 @@ function showMethodOfArrival(ndx) {
         .colors(typeColors);
 }
 
+// This function shows us in the form of a pie-chart what reason the visiters to London had, it also provides us a percentage of how many vistied
+// for what reason.
+
 function showCountryOfOrigin(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["Business", "Holiday", "Study", "Miscellaneous", "VFR"])
@@ -169,6 +190,8 @@ function showCountryOfOrigin(ndx) {
         })
         .colors(typeColors);
 }
+
+// This function creates a stacked bar-chart comparing method of arrival to reason for there visit. 
 
 function visitsPerCountry(ndx) {
     
@@ -225,6 +248,8 @@ function visitsPerCountry(ndx) {
         .margins({top: 50, right: 100, bottom: 30, left: 50})
         .colors(typeColors);
 }
+
+// this function creates a simple bar-chart showing how many peop-le visited London by what vountry they arrived from.
 
 function CountryOfOrigin(ndx) {
     var typeColors = d3.scale.ordinal()
