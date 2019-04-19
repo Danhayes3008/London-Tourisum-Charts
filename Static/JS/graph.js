@@ -28,7 +28,6 @@ function makeGraphs(error, londonData){
     show_reason_for_visit(ndx);
     show_method_of_arrival(ndx);
     show_country_of_origin(ndx);
-    show_visit_per_year(ndx);
     visits_per_country(ndx);
     Country_of_origin(ndx);
     
@@ -168,23 +167,6 @@ function show_country_of_origin(ndx) {
                 return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%';
             })
         })
-        .colors(typeColors);
-}
-
-function show_visit_per_year(ndx) {
-    var typeColors = d3.scale.ordinal()
-        .domain(["1-3 nights", "4-7 nights", "8-14 nights", "15+ nights"])
-        .range(["#65D254", "#54C3D2", "#54A0D2"]);
-    var countryDim = ndx.dimension(dc.pluck("dur_stay"));
-    var countryOfOrigin = countryDim.group();
-
-    dc.pieChart("#pie-spend")
-        .height(250)
-        .radius(100)
-        .transitionDuration(500)
-        .dimension(countryDim)
-        .group(countryOfOrigin)
-        .colorAccessor(function(d) { return d.key[0]; })
         .colors(typeColors);
 }
 
