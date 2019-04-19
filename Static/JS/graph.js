@@ -22,21 +22,21 @@ function makeGraphs(error, londonData){
 
     });
     
-    show_selector(ndx);
-    show_total_spent(ndx);
-    show_total_visits(ndx);
-    show_reason_for_visit(ndx);
-    show_method_of_arrival(ndx);
-    show_country_of_origin(ndx);
-    visits_per_country(ndx);
-    Country_of_origin(ndx);
+    showSelector(ndx);
+    showTotalSpent(ndx);
+    showTotalVisits(ndx);
+    showReasonForVisit(ndx);
+    showMethodOfArrival(ndx);
+    showCountryOfOrigin(ndx);
+    visitsPerCountry(ndx);
+    CountryOfOrigin(ndx);
     
     /*global dc*/
     dc.renderAll();
 }
 
 
-function show_selector(ndx) {
+function showSelector(ndx) {
     var countryDim = ndx.dimension(dc.pluck('market'));
     var group = countryDim.group();
 
@@ -45,7 +45,7 @@ function show_selector(ndx) {
         .group(group);
 }
 
-function show_total_spent(ndx) {
+function showTotalSpent(ndx) {
     var totalSpend = ndx.groupAll().reduce(
         function(p, v) {
             if (v.spend === 1) {
@@ -74,7 +74,7 @@ function show_total_spent(ndx) {
         .group(totalSpend);
 }
 
-function show_total_visits(ndx){
+function showTotalVisits(ndx){
     var totalVisits = ndx.groupAll().reduce(
         function(p, v) {
             if (v.visits === 1) {
@@ -103,7 +103,7 @@ function show_total_visits(ndx){
         .group(totalVisits);
 }
 
-function show_reason_for_visit(ndx) {
+function showReasonForVisit(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["Tunnel", "Sea", "Air"])
         .range(["#54C3D2", "#54A0D2", "#D26D54", "#54D291"]);
@@ -126,7 +126,7 @@ function show_reason_for_visit(ndx) {
         
 }
 
-function show_method_of_arrival(ndx) {
+function showMethodOfArrival(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["Tunnel", "Sea", "Air"])
         .range(["#54C3D2", "#54A0D2", "#D26D54", "#54D291"]);
@@ -148,7 +148,7 @@ function show_method_of_arrival(ndx) {
         .colors(typeColors);
 }
 
-function show_country_of_origin(ndx) {
+function showCountryOfOrigin(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["Business", "Holiday", "Study", "Miscellaneous", "VFR"])
         .range(["#65D254", "#54C3D2", "#54A0D2", "#D26D54", "#54D291"]);
@@ -170,7 +170,7 @@ function show_country_of_origin(ndx) {
         .colors(typeColors);
 }
 
-function visits_per_country(ndx) {
+function visitsPerCountry(ndx) {
     
     var typeColors = d3.scale.ordinal()
         .domain(["Air", "Tunnel", "Sea"])
@@ -226,7 +226,7 @@ function visits_per_country(ndx) {
         .colors(typeColors);
 }
 
-function Country_of_origin(ndx) {
+function CountryOfOrigin(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["market"])
         .range(["#65D254", "#D28B54", "#D26D54", "#54D291", "#54D2AC", "#54C3D2", "#54A0D2"]);
