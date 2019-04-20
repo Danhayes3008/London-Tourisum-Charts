@@ -68,7 +68,7 @@ In combanation with Bootstrap I used my own scss files to give the dashboard a p
 This also allowed me to get the dashboard to work properly on all devices, and to the look i was hoping for.
 
 
-<a href="https://en.wikipedia.org/wiki/JavaScript target="-blank""><strong>JavaScript</strong></a>
+<a href="https://en.wikipedia.org/wiki/JavaScript" target="-blank"><strong>JavaScript</strong></a>
 -
 JavaScript was used to make all the charts, to do this it required the d3, dc, crossfilter
 JavaScript files aswell as my own graph file that contains the functions for the charts.
