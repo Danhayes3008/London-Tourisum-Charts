@@ -75,7 +75,7 @@ JavaScript files aswell as my own graph file that contains the functions for the
 The queue file makes all the javascript wait until the dashboard is rendered.
 
 
-<a href=”http://getbootstrap.com” target="-blank"><strong>Bootstrap</strong></a>
+<a href=”https://getbootstrap.com” target="-blank"><strong>Bootstrap</strong></a>
 - 
 I used Bootstrap to give the 
 dashboard a basic styling, suported with my own scss files for a personal look.
