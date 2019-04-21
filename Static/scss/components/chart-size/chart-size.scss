@@ -10,6 +10,10 @@
     width:105%;
     height:100%;
     border: solid 1px;
+    
+    @include mobile{
+        width: 100%;
+    }
 }
 
 .reason-size{
