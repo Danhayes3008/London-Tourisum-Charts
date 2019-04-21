@@ -82,6 +82,21 @@ dashboard a basic styling, suported with my own scss files for a personal look.
 
 -----------------------------------------------------------
 
+<strong>Layout</strong>
+-
+
+The layout for this dashboard is very basic, I have gone for a two column layout with the main 
+chart on the top just below the menu selector and card elements that contain the total visits 
+and total spent amounts. For mobile I have chosen to make the charts one on top of the other 
+due to the size of them. Due to this I have added a return link into all the charts so that 
+the user may return to the top of the page, so they can access the reset button and menu selector.
+Simple colors scheme was chosen to give it a casual look.
+
+The Total spent is in the millions and the Total visited is one thousand for every one, this adds up to over thirteen
+million visited in the ten years. 
+
+-----------------------------------------------------------
+
 <strong>Deployment:</strong>
 -
 
@@ -107,7 +122,17 @@ git clone https://github.com/Danhayes3008/Milestone-project-2.git
 
 -----------------------------------------------------------
 
-<strong>contrabutions</strong>
+<strong>Bugs</strong>
+-
+
+currently there is a bug with the first chart on the dashboard, this bug prevents
+any user from viewing the columns for USA and United arab Emirates. I have found
+what i need to do to fix it using the developers tools, but currently don't know
+how to implement this into the project.
+
+-----------------------------------------------------------
+
+<strong>contrabutions:</strong>
 -
 
 <strong>JoWings</strong>
@@ -124,7 +149,7 @@ thurther down the road when i start using Jquery.
 
 Marie O on slack chat room helped me by viewing the dashboard and giving some
 feedback back about the ux. she has suggested the
-following changes to imrove the site:
+following changes to improve the site:
 
 - change the footer background colour
 
