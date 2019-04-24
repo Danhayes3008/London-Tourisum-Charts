@@ -18,6 +18,9 @@
   width: 100%;
   height: 100%;
   border: solid 1px; }
+  @media (max-width: 767px) {
+    .reason-size {
+      width: 93%; } }
 
 .spend-size {
   margin: 1%;
@@ -63,6 +66,9 @@
   width: 100%;
   height: 100%;
   border: solid 1px; }
+  @media (max-width: 767px) {
+    .VPC-size {
+      width: 93%; } }
 
 .market-size {
   margin: 1%;
@@ -70,6 +76,9 @@
   width: 100%;
   height: 100%;
   border: solid 1px; }
+  @media (max-width: 767px) {
+    .market-size {
+      width: 93%; } }
 
 .card {
   padding: 0;
@@ -154,6 +163,12 @@ a {
 
 .mar2 {
   margin-bottom: 5%; }
+
+.mar3 {
+  margin-left: 4%; }
+
+.mar4 {
+  margin-left: 2%; }
 
 .underline {
   text-decoration: underline; }
