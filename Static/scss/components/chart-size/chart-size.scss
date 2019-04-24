@@ -12,11 +12,12 @@
     border: solid 1px;
     
     @include mobile{
-        width: 100%;
+        width: 93%;
     }
 }
 
 .reason-size{
+    margin: 1%;
     padding:0;
     width:100%;
     height:100%;
@@ -24,34 +25,53 @@
 }
 
 .spend-size{
-    margin:1%;
+    margin: 1%;
     padding:0;
     width: 100%;
     height:100%;
     border: solid 1px;
     text-align: center;
+    
+    @include mobile{
+        width: 93%;
+    }
 }
 
 .visits-size{
-    margin:1%;
+    margin: 1%;
     padding:0;
     width:100%;
     height:100%;
     border: solid 1px;
     text-align: center;
+    
+    @include mobile{
+        width: 93%;
+    }
 }
 
 .arrival-size{
+    margin: 1%;
     padding:0;
     border: solid 1px;
+    
+    @include mobile{
+        width: 93%;
+    }
 }
 
 .country-size{
+    margin: 1%;
     padding:0;
     border: solid 1px;
+    
+     @include mobile{
+        width: 93%;
+    }
 }
 
 .VPC-size{
+    margin: 1%;
     padding:0;
     width:100%;
     height:100%;
@@ -59,7 +79,7 @@
 }
 
 .market-size{
-    margin:1%;
+    margin: 1%;
     padding:0;
     width:100%;
     height:100%;
