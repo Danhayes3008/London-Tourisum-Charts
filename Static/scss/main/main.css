@@ -73,6 +73,9 @@ img {
   margin-top: 5%;
   width: 100%;
   border: solid 2px #000000; }
+  @media (max-width: 767px) {
+    img {
+      width: 95%; } }
 
 #market .x.axis text {
   text-anchor: end !important;
