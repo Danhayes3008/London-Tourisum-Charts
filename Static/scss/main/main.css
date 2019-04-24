@@ -10,9 +10,10 @@
   border: solid 1px; }
   @media (max-width: 767px) {
     .selectMenu-size {
-      width: 100%; } }
+      width: 93%; } }
 
 .reason-size {
+  margin: 1%;
   padding: 0;
   width: 100%;
   height: 100%;
@@ -25,6 +26,9 @@
   height: 100%;
   border: solid 1px;
   text-align: center; }
+  @media (max-width: 767px) {
+    .spend-size {
+      width: 93%; } }
 
 .visits-size {
   margin: 1%;
@@ -33,16 +37,28 @@
   height: 100%;
   border: solid 1px;
   text-align: center; }
+  @media (max-width: 767px) {
+    .visits-size {
+      width: 93%; } }
 
 .arrival-size {
+  margin: 1%;
   padding: 0;
   border: solid 1px; }
+  @media (max-width: 767px) {
+    .arrival-size {
+      width: 93%; } }
 
 .country-size {
+  margin: 1%;
   padding: 0;
   border: solid 1px; }
+  @media (max-width: 767px) {
+    .country-size {
+      width: 93%; } }
 
 .VPC-size {
+  margin: 1%;
   padding: 0;
   width: 100%;
   height: 100%;
@@ -147,6 +163,10 @@ a {
 
 .retun-pad-btm {
   padding-bottom: 3%; }
+
+@media (max-width: 767px) {
+  .scroll {
+    overflow: auto; } }
 
 body {
   background-color: #C1F5FB;
