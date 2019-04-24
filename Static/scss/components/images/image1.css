@@ -6,7 +6,11 @@ Error: Undefined variable: "$black".
 2:     margin-top: 5%;
 3:     width:100%;
 4:     border: solid 2px $black;
-5: }
+5:     
+6:     @include mobile{
+7:         width: 95%;
+8:     }
+9: }
 
 Backtrace:
 Static/scss/components/images/image1.scss:4
@@ -63,4 +67,4 @@ Static/scss/components/images/image1.scss:4
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$black\".\A         on line 4 of Static/scss/components/images/image1.scss\A \A 1: img{\A 2:     margin-top: 5%;\A 3:     width:100%;\A 4:     border: solid 2px $black;\A 5: }"; }
+  content: "Error: Undefined variable: \"$black\".\A         on line 4 of Static/scss/components/images/image1.scss\A \A 1: img{\A 2:     margin-top: 5%;\A 3:     width:100%;\A 4:     border: solid 2px $black;\A 5:     \A 6:     @include mobile{\A 7:         width: 95%;\A 8:     }\A 9: }"; }
