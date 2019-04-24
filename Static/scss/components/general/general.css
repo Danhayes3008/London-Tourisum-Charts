@@ -1,21 +1,21 @@
 /*
 Error: Undefined mixin 'mobile'.
-        on line 61 of Static/scss/components/general/general.scss, in `mobile'
-        from line 61 of Static/scss/components/general/general.scss
+        on line 69 of Static/scss/components/general/general.scss, in `mobile'
+        from line 69 of Static/scss/components/general/general.scss
 
-56:     padding-bottom:3%;
-57: }
-58: 
-59: .scroll{
-60:     
-61:     @include mobile{
-62:         overflow:auto;
-63:     }
-64: }
+64:     padding-bottom:3%;
+65: }
+66: 
+67: .scroll{
+68:     
+69:     @include mobile{
+70:         overflow:auto;
+71:     }
+72: }
 
 Backtrace:
-Static/scss/components/general/general.scss:61:in `mobile'
-Static/scss/components/general/general.scss:61
+Static/scss/components/general/general.scss:69:in `mobile'
+Static/scss/components/general/general.scss:69
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:98:in `block in with_mixin'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
@@ -67,4 +67,4 @@ Static/scss/components/general/general.scss:61
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'mobile'.\A         on line 61 of Static/scss/components/general/general.scss, in `mobile'\A         from line 61 of Static/scss/components/general/general.scss\A \A 56:     padding-bottom:3%;\A 57: }\A 58: \A 59: .scroll{\A 60:     \A 61:     @include mobile{\A 62:         overflow:auto;\A 63:     }\A 64: }"; }
+  content: "Error: Undefined mixin 'mobile'.\A         on line 69 of Static/scss/components/general/general.scss, in `mobile'\A         from line 69 of Static/scss/components/general/general.scss\A \A 64:     padding-bottom:3%;\A 65: }\A 66: \A 67: .scroll{\A 68:     \A 69:     @include mobile{\A 70:         overflow:auto;\A 71:     }\A 72: }"; }
