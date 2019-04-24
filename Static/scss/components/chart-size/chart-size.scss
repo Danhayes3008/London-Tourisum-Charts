@@ -22,6 +22,10 @@
     width:100%;
     height:100%;
     border: solid 1px;
+    
+    @include mobile{
+        width: 93%;
+    }
 }
 
 .spend-size{
@@ -76,6 +80,10 @@
     width:100%;
     height:100%;
     border: solid 1px;
+    
+    @include mobile{
+        width: 93%;
+    }
 }
 
 .market-size{
@@ -84,4 +92,8 @@
     width:100%;
     height:100%;
     border: solid 1px;
+    
+     @include mobile{
+        width: 93%;
+    }
 }
