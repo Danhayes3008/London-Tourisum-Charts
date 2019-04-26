@@ -4,23 +4,35 @@ h1{
 
 .btn{
     border: solid 1px grey;
-    margin-top:15%;
-    color:black;
+    margin-top: 15%;
+    color: black;
 }
 
 .button{
     width: 150px;
+    
+    @include mobile{
+        width: 75%;
+        margin-left: 15%;
+    }
 }
 
 .padding1{
-    padding-left:2%;
+    padding-left: 7%;
 }
 .padding2{
-    padding-top:8%;
+    padding-top: 8%;
 }
 
 .padding3{
-    padding-top:3%;
+    padding-top: 3%;
+}
+
+.padding4{
+    
+    @include mobile{
+        padding-bottom: 2%;
+    }
 }
 
 .refresh{
@@ -30,15 +42,19 @@ h1{
 }
 
 .select{
-    margin-top:20%;
+    margin-top: 20%;
 }
 
 a{
-    color:black;
+    color: black;
 }
 
 .mar1{
     margin-top: 2%;
+    
+    @include mobile{
+        margin-top: 6%;
+    }
 }
 .mar2{
     margin-bottom: 5%;
@@ -61,12 +77,12 @@ a{
 }
 
 .retun-pad-btm{
-    padding-bottom:3%;
+    padding-bottom: 3%;
 }
 
 .scroll{
     
     @include mobile{
-        overflow:auto;
+        overflow: auto;
     }
 }

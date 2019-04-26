@@ -1,21 +1,23 @@
 /*
 Error: Undefined mixin 'mobile'.
-        on line 69 of Static/scss/components/general/general.scss, in `mobile'
-        from line 69 of Static/scss/components/general/general.scss
+        on line 14 of Static/scss/components/general/general.scss, in `mobile'
+        from line 14 of Static/scss/components/general/general.scss
 
-64:     padding-bottom:3%;
-65: }
-66: 
-67: .scroll{
-68:     
-69:     @include mobile{
-70:         overflow:auto;
-71:     }
-72: }
+9: }
+10: 
+11: .button{
+12:     width: 150px;
+13:     
+14:     @include mobile{
+15:         width: 75%;
+16:         margin-left: 15%;
+17:     }
+18: }
+19: 
 
 Backtrace:
-Static/scss/components/general/general.scss:69:in `mobile'
-Static/scss/components/general/general.scss:69
+Static/scss/components/general/general.scss:14:in `mobile'
+Static/scss/components/general/general.scss:14
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:98:in `block in with_mixin'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
@@ -67,4 +69,4 @@ Static/scss/components/general/general.scss:69
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'mobile'.\A         on line 69 of Static/scss/components/general/general.scss, in `mobile'\A         from line 69 of Static/scss/components/general/general.scss\A \A 64:     padding-bottom:3%;\A 65: }\A 66: \A 67: .scroll{\A 68:     \A 69:     @include mobile{\A 70:         overflow:auto;\A 71:     }\A 72: }"; }
+  content: "Error: Undefined mixin 'mobile'.\A         on line 14 of Static/scss/components/general/general.scss, in `mobile'\A         from line 14 of Static/scss/components/general/general.scss\A \A 9: }\A 10: \A 11: .button{\A 12:     width: 150px;\A 13:     \A 14:     @include mobile{\A 15:         width: 75%;\A 16:         margin-left: 15%;\A 17:     }\A 18: }\A 19: "; }
