@@ -9,7 +9,7 @@ Error: Undefined mixin 'mobile'.
 12:     border: solid 1px;
 13:     
 14:     @include mobile{
-15:         width: 100%;
+15:         width: 93%;
 16:     }
 17: }
 18: 
@@ -69,4 +69,4 @@ Static/scss/components/chart-size/chart-size.scss:14
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'mobile'.\A         on line 14 of Static/scss/components/chart-size/chart-size.scss, in `mobile'\A         from line 14 of Static/scss/components/chart-size/chart-size.scss\A \A 9:     padding:0;\A 10:     width:105%;\A 11:     height:100%;\A 12:     border: solid 1px;\A 13:     \A 14:     @include mobile{\A 15:         width: 100%;\A 16:     }\A 17: }\A 18: \A 19: .reason-size{"; }
+  content: "Error: Undefined mixin 'mobile'.\A         on line 14 of Static/scss/components/chart-size/chart-size.scss, in `mobile'\A         from line 14 of Static/scss/components/chart-size/chart-size.scss\A \A 9:     padding:0;\A 10:     width:105%;\A 11:     height:100%;\A 12:     border: solid 1px;\A 13:     \A 14:     @include mobile{\A 15:         width: 93%;\A 16:     }\A 17: }\A 18: \A 19: .reason-size{"; }
