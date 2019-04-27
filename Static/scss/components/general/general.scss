@@ -18,7 +18,11 @@ h1{
 }
 
 .padding1{
+    padding-left: 3%;
+    
+    @include mobile{
     padding-left: 7%;
+    }
 }
 .padding2{
     padding-top: 8%;
@@ -61,11 +65,17 @@ a{
 }
 
 .mar3{
+    
+    @include mobile{
     margin-left: 4%;
+    }
 }
 
 .mar4{
+    
+    @include mobile{
     margin-left: 2%;
+    }
 }
 
 .underline{
