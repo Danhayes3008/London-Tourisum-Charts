@@ -20,7 +20,7 @@
   border: solid 1px; }
   @media (max-width: 767px) {
     .reason-size {
-      width: 93%; } }
+      width: 89%; } }
 
 .spend-size {
   margin: 1%;
@@ -50,7 +50,7 @@
   border: solid 1px; }
   @media (max-width: 767px) {
     .arrival-size {
-      width: 93%; } }
+      width: 89%; } }
 
 .country-size {
   margin: 1%;
@@ -58,7 +58,7 @@
   border: solid 1px; }
   @media (max-width: 767px) {
     .country-size {
-      width: 93%; } }
+      width: 89%; } }
 
 .VPC-size {
   margin: 1%;
@@ -68,7 +68,7 @@
   border: solid 1px; }
   @media (max-width: 767px) {
     .VPC-size {
-      width: 93%; } }
+      width: 89%; } }
 
 .market-size {
   margin: 1%;
@@ -78,7 +78,7 @@
   border: solid 1px; }
   @media (max-width: 767px) {
     .market-size {
-      width: 93%; } }
+      width: 89%; } }
 
 .card {
   padding: 0;
@@ -137,15 +137,23 @@ h1 {
 
 .button {
   width: 150px; }
+  @media (max-width: 767px) {
+    .button {
+      width: 75%;
+      margin-left: 15%; } }
 
 .padding1 {
-  padding-left: 2%; }
+  padding-left: 7%; }
 
 .padding2 {
   padding-top: 8%; }
 
 .padding3 {
   padding-top: 3%; }
+
+@media (max-width: 767px) {
+  .padding4 {
+    padding-bottom: 2%; } }
 
 .refresh {
   padding-left: 20%;
@@ -160,6 +168,9 @@ a {
 
 .mar1 {
   margin-top: 2%; }
+  @media (max-width: 767px) {
+    .mar1 {
+      margin-top: 6%; } }
 
 .mar2 {
   margin-bottom: 5%; }
