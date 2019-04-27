@@ -107,9 +107,12 @@ img {
 #market .x.axis text {
   text-anchor: end !important;
   transform: rotate(-90deg);
-  font-size: small;
+  font-size: 20px;
   margin-left: 0;
-  padding-top: 5px; }
+  padding-top: 150px; }
+
+#market .x.axis text {
+  margin-top: 10px; }
 
 #reason1 .x.axis text {
   text-anchor: end !important;
