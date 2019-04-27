@@ -178,7 +178,7 @@ function showCountryOfOrigin(ndx) {
 
     dc.pieChart("#country")
         .height(400)
-        .radius(300)
+        .radius(400)
         .transitionDuration(500)
         .dimension(countryDim)
         .group(countryOfOrigin)
@@ -245,7 +245,7 @@ function visitsPerCountry(ndx) {
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .legend(dc.legend().x(420).y(50).itemHeight(15).gap(5))
-        .margins({top: 50, right: 100, bottom: 30, left: 20})
+        .margins({top: 10, right: 100, bottom: 30, left: 20})
         .colors(typeColors);
 }
 
