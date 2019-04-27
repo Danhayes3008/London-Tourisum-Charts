@@ -78,6 +78,12 @@ a{
     }
 }
 
+.mar5{
+    @include mobile{
+        margin-top: 6%;
+    }
+}
+
 .underline{
     text-decoration: underline;
 }
