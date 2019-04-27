@@ -272,7 +272,5 @@ function CountryOfOrigin(ndx) {
         .transitionDuration(500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .yAxis().ticks(9);
-
-
+        .yAxis().ticks(10);
 }
