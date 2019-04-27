@@ -143,7 +143,10 @@ h1 {
       margin-left: 15%; } }
 
 .padding1 {
-  padding-left: 7%; }
+  padding-left: 3%; }
+  @media (max-width: 767px) {
+    .padding1 {
+      padding-left: 7%; } }
 
 .padding2 {
   padding-top: 8%; }
@@ -175,11 +178,13 @@ a {
 .mar2 {
   margin-bottom: 5%; }
 
-.mar3 {
-  margin-left: 4%; }
+@media (max-width: 767px) {
+  .mar3 {
+    margin-left: 4%; } }
 
-.mar4 {
-  margin-left: 2%; }
+@media (max-width: 767px) {
+  .mar4 {
+    margin-left: 2%; } }
 
 .underline {
   text-decoration: underline; }
