@@ -46,6 +46,7 @@
 
 .arrival-size {
   margin: 1%;
+  height: 100%;
   padding: 0;
   border: solid 1px; }
   @media (max-width: 767px) {
@@ -54,6 +55,7 @@
 
 .country-size {
   margin: 1%;
+  height: 100%;
   padding: 0;
   border: solid 1px; }
   @media (max-width: 767px) {
@@ -185,6 +187,10 @@ a {
 @media (max-width: 767px) {
   .mar4 {
     margin-left: 2%; } }
+
+@media (max-width: 767px) {
+  .mar5 {
+    margin-top: 6%; } }
 
 .underline {
   text-decoration: underline; }
