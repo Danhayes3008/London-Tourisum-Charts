@@ -109,8 +109,7 @@ img {
   transform: rotate(-90deg);
   font-size: 20px;
   margin-left: 0;
-  margin-top: 10px;
-  height: 30px; }
+  padding: 0; }
 
 #market .x.axis text {
   margin-top: 10px; }
@@ -139,6 +138,9 @@ img {
 #arrival {
   padding-top: 2%;
   padding-bottom: 2%; }
+
+.tick {
+  margin-top: 10px; }
 
 h1 {
   padding-top: 5%; }
