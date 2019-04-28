@@ -10,10 +10,13 @@
     margin-top: 10px;
 }
 
-#reason1 .x.axis text {
-    text-anchor: end !important;
-    transform: rotate(-90deg);
-    font-size: 100px;
+#market-clip rect{
+    width: 1100px;
+}
+
+#reason .x.axis text {
+    text-anchor: middle !important;
+    font-size: 20px;
     margin-left: 0;
     padding-left: 0;
 }
@@ -24,6 +27,12 @@
     
 #VPC{
     padding-left:15%;
+}
+
+#VPC .x.axis text{
+    text-anchor: middle !important;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 #arrival{
