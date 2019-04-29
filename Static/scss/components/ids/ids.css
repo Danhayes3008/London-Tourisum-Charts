@@ -28,8 +28,9 @@
   padding-left: 15%; }
 
 #VPC .x.axis text {
-  text-anchor: middle !important;
-  font-size: 15px;
+  text-anchor: end !important;
+  transform: rotate(-45deg);
+  font-size: 10px;
   font-weight: bold; }
 
 #arrival {
