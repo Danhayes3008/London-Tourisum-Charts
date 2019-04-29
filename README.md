@@ -143,6 +143,9 @@ element that allows me to reset all charts and the select menu.
 She also helped me improve on the reset button so that i wouldnt have problems
 thurther down the road when i start using Jquery.
 
+Jo also provided me with a way to make my large charts look better on smaller screens
+by adding overflow: auto to the charts it is needed on.
+
 
 <strong>Marie O</strong>
 -
@@ -182,5 +185,13 @@ at solution which was to add ._rangeBandPadding(1) into the chart coding
 found a way to add percentages into my piecharts. Acknowlagemnt for this bit of
 code goes to <a href="https://github.com/gordonwoodhull" target="_blank">Gordon
 Woodhull</a> on github.
+
+<strong>Tim Nelson</strong>
+-
+
+after asking for help on the slack channel <a href="https://github.com/TravelTimN" target="_blank">Tim Nelson</a> spent
+some time with me when he was already busy trying to help me sort out my problem with the x axis text in 
+me country of origin chart. After whilst throwing back and forward possible fixes Tom found a way to make the text
+work.
 
 image is from Wikipidia
