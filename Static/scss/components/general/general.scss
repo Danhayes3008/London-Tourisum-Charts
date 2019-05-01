@@ -99,10 +99,3 @@ a{
 .retun-pad-btm{
     padding-bottom: 3%;
 }
-
-.scroll{
-    
-    @include mobile{
-        overflow: auto;
-    }
-}
