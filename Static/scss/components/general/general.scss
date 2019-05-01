@@ -17,6 +17,10 @@ h1{
     }
 }
 
+.display-4 {
+    font-size: 2rem;
+}
+
 .padding1{
     padding-left: 3%;
     
@@ -41,16 +45,15 @@ h1{
 
 .refresh{
   padding-left: 20%;
-  padding-top: 5%;
   width: 150px;
+ 
+  @include tablet{
+      padding-left: 10%;
+  }
 }
 
 .select{
-    margin-top: 20%;
-    
-    @include mobile{
-        margin-top: 10%;
-    }
+    margin-top: 10%;
 }
 
 a{
