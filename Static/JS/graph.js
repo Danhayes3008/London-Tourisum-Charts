@@ -131,6 +131,7 @@ function showReasonForVisit(ndx) {
         .colorAccessor(function(d) { return d.key[0]; })
         .colors(typeColors)
         .margins({ top: 10, right: 50, bottom: 40, left: 80 })
+        .useViewBoxResizing(true)
         .dimension(reasonDim)
         .group(group)
         .transitionDuration(500)
@@ -157,6 +158,7 @@ function showMethodOfArrival(ndx) {
         .transitionDuration(500)
         .dimension(arrivalDim)
         .group(methodOfArrival)
+        .useViewBoxResizing(true)
         .colorAccessor(function(d) { return d.key[0]; })
         .on('pretransition', function(chart) {
             chart.selectAll('text.pie-slice').text(function(d) {
@@ -180,6 +182,7 @@ function showCountryOfOrigin(ndx) {
         .height(400)
         .radius(400)
         .transitionDuration(500)
+        .useViewBoxResizing(true)
         .dimension(countryDim)
         .group(countryOfOrigin)
         .colorAccessor(function(d) { return d.key[0]; })
@@ -246,6 +249,7 @@ function visitsPerCountry(ndx) {
         .xUnits(dc.units.ordinal)
         .legend(dc.legend().x(420).y(50).itemHeight(15).gap(5))
         .margins({top: 10, right: 100, bottom: 80, left: 20})
+        .useViewBoxResizing(true)
         .colors(typeColors);
 }
 
