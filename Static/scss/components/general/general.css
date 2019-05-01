@@ -9,8 +9,8 @@ Error: Undefined mixin 'mobile'.
 12:     width: 150px;
 13:     
 14:     @include mobile{
-15:         width: 75%;
-16:         margin-left: 15%;
+15:         width: 125px;
+16:         margin-left: 25%;
 17:     }
 18: }
 19: 
@@ -69,4 +69,4 @@ Static/scss/components/general/general.scss:14
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'mobile'.\A         on line 14 of Static/scss/components/general/general.scss, in `mobile'\A         from line 14 of Static/scss/components/general/general.scss\A \A 9: }\A 10: \A 11: .button{\A 12:     width: 150px;\A 13:     \A 14:     @include mobile{\A 15:         width: 75%;\A 16:         margin-left: 15%;\A 17:     }\A 18: }\A 19: "; }
+  content: "Error: Undefined mixin 'mobile'.\A         on line 14 of Static/scss/components/general/general.scss, in `mobile'\A         from line 14 of Static/scss/components/general/general.scss\A \A 9: }\A 10: \A 11: .button{\A 12:     width: 150px;\A 13:     \A 14:     @include mobile{\A 15:         width: 125px;\A 16:         margin-left: 25%;\A 17:     }\A 18: }\A 19: "; }
