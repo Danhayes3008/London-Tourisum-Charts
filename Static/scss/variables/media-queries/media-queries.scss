@@ -1,22 +1,21 @@
-// this is the size of standard tablets view
-$tablet-width: 768px;
-// this is the size of standard desktop view
-$desktop-width: 992px;
-// this is the size of large desktop view 
-$large-desktop-width: 1200px;
+$mobile-width: 599px;
+// this is the size of tablet view
+$tablet-width: 992px;
+// this is the size of desktop view 
+$desktop-width: 1800px;
 
 
 
 @mixin mobile{
-    @media(max-width: $tablet-width - 1px){
+    @media(max-width: $mobile-width - 1px){
         
         @content;
     }
 }
 
-@mixin tablet {
+@mixin tablet{
 
-    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+    @media(min-width: $mobile-width) and (max-width: $tablet-width - 1px){
 
         @content;
 
@@ -26,9 +25,9 @@ $large-desktop-width: 1200px;
 
 
 
-@mixin desktop {
+@mixin desktop{
 
-    @media (min-width: $desktop-width) and (max-width: $large-desktop-width - 1px) {
+    @media(min-width: $tablet-width) and (max-width: $desktop-width - 1px){
 
         @content;
 
