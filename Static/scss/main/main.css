@@ -158,8 +158,8 @@ h1 {
   width: 150px; }
   @media (max-width: 767px) {
     .button {
-      width: 75%;
-      margin-left: 15%; } }
+      width: 125px;
+      margin-left: 25%; } }
 
 .padding1 {
   padding-left: 3%; }
@@ -184,6 +184,9 @@ h1 {
 
 .select {
   margin-top: 20%; }
+  @media (max-width: 767px) {
+    .select {
+      margin-top: 10%; } }
 
 a {
   color: black; }
