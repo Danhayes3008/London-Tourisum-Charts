@@ -8,7 +8,7 @@
   width: 105%;
   height: 100%;
   border: solid 1px; }
-  @media (max-width: 767px) {
+  @media (max-width: 598px) {
     .selectMenu-size {
       width: 93%; } }
 
@@ -18,7 +18,7 @@
   width: 100%;
   height: 100%;
   border: solid 1px; }
-  @media (max-width: 767px) {
+  @media (max-width: 598px) {
     .reason-size {
       width: 89%; } }
 
@@ -29,7 +29,7 @@
   height: 100%;
   border: solid 1px;
   text-align: center; }
-  @media (max-width: 767px) {
+  @media (max-width: 598px) {
     .spend-size {
       width: 93%; } }
 
@@ -40,7 +40,7 @@
   height: 100%;
   border: solid 1px;
   text-align: center; }
-  @media (max-width: 767px) {
+  @media (max-width: 598px) {
     .visits-size {
       width: 93%; } }
 
@@ -49,7 +49,7 @@
   height: 100%;
   padding: 0;
   border: solid 1px; }
-  @media (max-width: 767px) {
+  @media (max-width: 598px) {
     .arrival-size {
       width: 89%; } }
 
@@ -58,7 +58,7 @@
   height: 100%;
   padding: 0;
   border: solid 1px; }
-  @media (max-width: 767px) {
+  @media (max-width: 598px) {
     .country-size {
       width: 89%; } }
 
@@ -68,7 +68,7 @@
   width: 100%;
   height: 100%;
   border: solid 1px; }
-  @media (max-width: 767px) {
+  @media (max-width: 598px) {
     .VPC-size {
       width: 89%; } }
 
@@ -78,7 +78,7 @@
   width: 100%;
   height: 100%;
   border: solid 1px; }
-  @media (max-width: 767px) {
+  @media (max-width: 598px) {
     .market-size {
       width: 89%; } }
 
@@ -100,7 +100,7 @@ img {
   margin-top: 5%;
   width: 100%;
   border: solid 2px #000000; }
-  @media (max-width: 767px) {
+  @media (max-width: 598px) {
     img {
       width: 95%; } }
 
@@ -156,14 +156,17 @@ h1 {
 
 .button {
   width: 150px; }
-  @media (max-width: 767px) {
+  @media (max-width: 598px) {
     .button {
       width: 125px;
       margin-left: 25%; } }
 
+.display-4 {
+  font-size: 2rem; }
+
 .padding1 {
   padding-left: 3%; }
-  @media (max-width: 767px) {
+  @media (max-width: 598px) {
     .padding1 {
       padding-left: 7%; } }
 
@@ -173,42 +176,41 @@ h1 {
 .padding3 {
   padding-top: 3%; }
 
-@media (max-width: 767px) {
+@media (max-width: 598px) {
   .padding4 {
     padding-bottom: 2%; } }
 
 .refresh {
   padding-left: 20%;
-  padding-top: 5%;
   width: 150px; }
+  @media (min-width: 599px) and (max-width: 991px) {
+    .refresh {
+      padding-left: 10%; } }
 
 .select {
-  margin-top: 20%; }
-  @media (max-width: 767px) {
-    .select {
-      margin-top: 10%; } }
+  margin-top: 10%; }
 
 a {
   color: black; }
 
 .mar1 {
   margin-top: 2%; }
-  @media (max-width: 767px) {
+  @media (max-width: 598px) {
     .mar1 {
       margin-top: 6%; } }
 
 .mar2 {
   margin-bottom: 5%; }
 
-@media (max-width: 767px) {
+@media (max-width: 598px) {
   .mar3 {
     margin-left: 4%; } }
 
-@media (max-width: 767px) {
+@media (max-width: 598px) {
   .mar4 {
     margin-left: 2%; } }
 
-@media (max-width: 767px) {
+@media (max-width: 598px) {
   .mar5 {
     margin-top: 6%; } }
 
@@ -220,10 +222,6 @@ a {
 
 .retun-pad-btm {
   padding-bottom: 3%; }
-
-@media (max-width: 767px) {
-  .scroll {
-    overflow: auto; } }
 
 body {
   background-color: #C1F5FB;
