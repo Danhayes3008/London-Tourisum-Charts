@@ -11,7 +11,7 @@
     height:100%;
     border: solid 1px;
     
-    @include mobile{
+    @include phone{
         width: 93%;
     }
 }
@@ -23,7 +23,7 @@
     height:100%;
     border: solid 1px;
     
-    @include mobile{
+    @include phone{
         width: 89%;
     }
 }
@@ -36,7 +36,7 @@
     border: solid 1px;
     text-align: center;
     
-    @include mobile{
+    @include phone{
         width: 93%;
     }
 }
@@ -49,7 +49,7 @@
     border: solid 1px;
     text-align: center;
     
-    @include mobile{
+    @include phone{
         width: 93%;
     }
 }
@@ -60,7 +60,7 @@
     padding:0;
     border: solid 1px;
     
-    @include mobile{
+    @include phone{
         width: 89%;
     }
 }
@@ -71,7 +71,7 @@
     padding:0;
     border: solid 1px;
     
-     @include mobile{
+     @include phone{
         width: 89%;
     }
 }
@@ -83,7 +83,7 @@
     height: 100%;
     border: solid 1px;
     
-    @include mobile{
+    @include phone{
         width: 89%;
     }
 }
@@ -95,7 +95,7 @@
     height:100%;
     border: solid 1px;
     
-     @include mobile{
+     @include phone{
         width: 89%;
     }
 }
