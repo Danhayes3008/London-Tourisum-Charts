@@ -1,36 +1,21 @@
-$mobile-width: 599px;
-// this is the size of tablet view
-$tablet-width: 992px;
-// this is the size of desktop view 
-$desktop-width: 1800px;
+$min-phone-width: 576px;
+$min-tablet-width: 768px;
+$min-desktop-width: 992px;
 
-
-
-@mixin mobile{
-    @media(max-width: $mobile-width - 1px){
-        
+@mixin phone {
+    @media (min-width: #{$min-phone-width}) {
         @content;
     }
 }
 
-@mixin tablet{
-
-    @media(min-width: $mobile-width) and (max-width: $tablet-width - 1px){
-
+@mixin tab {
+    @media (min-width: #{$min-tablet-width}) {
         @content;
-
     }
-
 }
 
-
-
-@mixin desktop{
-
-    @media(min-width: $tablet-width) and (max-width: $desktop-width - 1px){
-
+@mixin computer {
+    @media (min-width: #{$min-desktop-width}) {
         @content;
-
     }
-
 }
