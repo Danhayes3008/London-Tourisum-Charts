@@ -37,3 +37,15 @@
     padding-top:2%;
     padding-bottom:2%;
 }
+
+#selectMenu{
+    width: 100%;
+    
+    @include phone{
+        width: 25%;
+    }
+    
+    @include tab {
+        padding-left: 2%;
+    }
+}
