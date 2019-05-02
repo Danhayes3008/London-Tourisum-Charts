@@ -3,7 +3,7 @@ img{
     width:100%;
     border: solid 2px $black;
     
-    @include mobile{
+    @include phone{
         width: 95%;
     }
 }
