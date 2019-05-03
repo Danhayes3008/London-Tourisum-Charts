@@ -3,7 +3,11 @@ img{
     width:100%;
     border: solid 2px $black;
     
-    @include phone{
+    @include phone {
         width: 95%;
+    }
+    
+    @include tab {
+        width: 100%;
     }
 }
