@@ -25,7 +25,7 @@ h1{
     }
     
     @include tab{
-    padding-left: 7%;
+    padding-left: 5%;
     }
 }
 .padding2{
@@ -38,9 +38,15 @@ h1{
 }
 
 .padding4{
+    padding-top: 10%;
     
     @include phone {
         padding-bottom: 2%;
+    }
+    
+    @include tab{
+        padding-top: 0%;
+        padding-bottom: 0%;
     }
 }
 
@@ -50,7 +56,8 @@ h1{
 
  
   @include tab{
-      padding-left: 10%;
+      padding-left: 22%;
+      padding-top: 5%;
   }
 }
 
@@ -75,6 +82,10 @@ a{
     @include phone{
         margin-top: 6%;
     }
+    
+    @include tab {
+        margin-top: 2%;
+    }
 }
 .mar2{
     margin-bottom: 5%;
@@ -85,6 +96,14 @@ a{
     @include phone{
     margin-left: 4%;
     }
+    
+    @include tab {
+        margin-left: 5%;
+    }
+    
+    @include computer{
+        margin-left: 25%;
+    }
 }
 
 .mar4{
@@ -92,11 +111,29 @@ a{
     @include phone{
     margin-left: 2%;
     }
+    
+    @include tab {
+        margin-left: 1%;
+    }
+    
+    @include computer{
+        margin-left: 1%;
+    }
 }
 
 .mar5{
     @include phone{
         margin-top: 6%;
+    }
+    
+    @include tab{
+        margin-top: 0%;
+    }
+}
+
+.mar6{
+    @include tab{
+        margin-left: 4%;
     }
 }
 

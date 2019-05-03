@@ -8,12 +8,12 @@ Error: Undefined mixin 'phone'.
 20: .padding1{
 21:     padding-left: 3%;
 22:     
-23:     @include phone{
+23:     @include phone {
 24:         padding-left: 1%;
 25:     }
 26:     
 27:     @include tab{
-28:     padding-left: 7%;
+28:     padding-left: 5%;
 
 Backtrace:
 Static/scss/components/general/general.scss:23:in `phone'
@@ -69,4 +69,4 @@ Static/scss/components/general/general.scss:23
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'phone'.\A         on line 23 of Static/scss/components/general/general.scss, in `phone'\A         from line 23 of Static/scss/components/general/general.scss\A \A 18: }\A 19: \A 20: .padding1{\A 21:     padding-left: 3%;\A 22:     \A 23:     @include phone{\A 24:         padding-left: 1%;\A 25:     }\A 26:     \A 27:     @include tab{\A 28:     padding-left: 7%;"; }
+  content: "Error: Undefined mixin 'phone'.\A         on line 23 of Static/scss/components/general/general.scss, in `phone'\A         from line 23 of Static/scss/components/general/general.scss\A \A 18: }\A 19: \A 20: .padding1{\A 21:     padding-left: 3%;\A 22:     \A 23:     @include phone {\A 24:         padding-left: 1%;\A 25:     }\A 26:     \A 27:     @include tab{\A 28:     padding-left: 5%;"; }
