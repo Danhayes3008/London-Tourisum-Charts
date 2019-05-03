@@ -1,6 +1,6 @@
-$min-phone-width: 576px;
-$min-tablet-width: 768px;
-$min-desktop-width: 992px;
+$min-phone-width: 768px;
+$min-tablet-width: 992px;
+$min-desktop-width: 1800px;
 
 @mixin phone {
     @media (min-width: #{$min-phone-width}) {
