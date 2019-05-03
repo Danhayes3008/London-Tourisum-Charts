@@ -1,6 +1,6 @@
 /*
-Error: Undefined mixin 'mobile'.
-        on line 14 of Static/scss/components/chart-size/chart-size.scss, in `mobile'
+Error: Undefined mixin 'phone'.
+        on line 14 of Static/scss/components/chart-size/chart-size.scss, in `phone'
         from line 14 of Static/scss/components/chart-size/chart-size.scss
 
 9:     padding:0;
@@ -8,7 +8,7 @@ Error: Undefined mixin 'mobile'.
 11:     height:100%;
 12:     border: solid 1px;
 13:     
-14:     @include mobile{
+14:     @include phone{
 15:         width: 93%;
 16:     }
 17: }
@@ -16,7 +16,7 @@ Error: Undefined mixin 'mobile'.
 19: .reason-size{
 
 Backtrace:
-Static/scss/components/chart-size/chart-size.scss:14:in `mobile'
+Static/scss/components/chart-size/chart-size.scss:14:in `phone'
 Static/scss/components/chart-size/chart-size.scss:14
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:98:in `block in with_mixin'
@@ -69,4 +69,4 @@ Static/scss/components/chart-size/chart-size.scss:14
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'mobile'.\A         on line 14 of Static/scss/components/chart-size/chart-size.scss, in `mobile'\A         from line 14 of Static/scss/components/chart-size/chart-size.scss\A \A 9:     padding:0;\A 10:     width:105%;\A 11:     height:100%;\A 12:     border: solid 1px;\A 13:     \A 14:     @include mobile{\A 15:         width: 93%;\A 16:     }\A 17: }\A 18: \A 19: .reason-size{"; }
+  content: "Error: Undefined mixin 'phone'.\A         on line 14 of Static/scss/components/chart-size/chart-size.scss, in `phone'\A         from line 14 of Static/scss/components/chart-size/chart-size.scss\A \A 9:     padding:0;\A 10:     width:105%;\A 11:     height:100%;\A 12:     border: solid 1px;\A 13:     \A 14:     @include phone{\A 15:         width: 93%;\A 16:     }\A 17: }\A 18: \A 19: .reason-size{"; }

@@ -26,6 +26,10 @@
     @include phone{
         width: 89%;
     }
+    
+    @include tab{
+        width: 100%;
+    }
 }
 
 .spend-size{
@@ -86,6 +90,10 @@
     @include phone{
         width: 89%;
     }
+    
+    @include tab{
+        width: 100%;
+    }
 }
 
 .market-size{
@@ -97,5 +105,9 @@
     
      @include phone{
         width: 89%;
+    }
+    
+    @include tab {
+        width: 100%;
     }
 }
