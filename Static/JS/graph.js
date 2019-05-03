@@ -269,7 +269,7 @@ function CountryOfOrigin(ndx) {
         .height(500)
         .colorAccessor(function(d) { return d.key[0]; })
         .colors(typeColors)
-        .margins({ top: 10, right: 80, bottom: 200, left: 50 })
+        .margins({ top: 10, right: 80, bottom: 150, left: 50 })
         .useViewBoxResizing(true)
         .dimension(countryDim)
         .group(group)
