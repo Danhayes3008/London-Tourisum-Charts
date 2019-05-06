@@ -1,3 +1,11 @@
+.card {
+  padding: 0;
+  width: 100%;
+  background-color: #ABDFFB; }
+
+.card-header {
+  background-color: #C8E9FB; }
+
 .container-size {
   margin: 0;
   padding: 0; }
@@ -8,7 +16,7 @@
   width: 105%;
   height: 100%;
   border: solid 1px; }
-  @media (min-width: 768px) {
+  @media (max-width: 767px) {
     .selectMenu-size {
       width: 93%; } }
 
@@ -18,10 +26,10 @@
   width: 100%;
   height: 100%;
   border: solid 1px; }
-  @media (min-width: 768px) {
+  @media (max-width: 767px) {
     .reason-size {
       width: 89%; } }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) and (max-width: 991px) {
     .reason-size {
       width: 100%; } }
 
@@ -32,7 +40,7 @@
   height: 100%;
   border: solid 1px;
   text-align: center; }
-  @media (min-width: 768px) {
+  @media (max-width: 767px) {
     .spend-size {
       width: 93%; } }
 
@@ -43,7 +51,7 @@
   height: 100%;
   border: solid 1px;
   text-align: center; }
-  @media (min-width: 768px) {
+  @media (max-width: 767px) {
     .visits-size {
       width: 93%; } }
 
@@ -52,7 +60,7 @@
   height: 100%;
   padding: 0;
   border: solid 1px; }
-  @media (min-width: 768px) {
+  @media (max-width: 767px) {
     .arrival-size {
       width: 89%; } }
 
@@ -61,7 +69,7 @@
   height: 100%;
   padding: 0;
   border: solid 1px; }
-  @media (min-width: 768px) {
+  @media (max-width: 767px) {
     .country-size {
       width: 89%; } }
 
@@ -71,10 +79,10 @@
   width: 100%;
   height: 100%;
   border: solid 1px; }
-  @media (min-width: 768px) {
+  @media (max-width: 767px) {
     .VPC-size {
       width: 89%; } }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) and (max-width: 991px) {
     .VPC-size {
       width: 100%; } }
 
@@ -84,20 +92,12 @@
   width: 100%;
   height: 100%;
   border: solid 1px; }
-  @media (min-width: 768px) {
+  @media (max-width: 767px) {
     .market-size {
       width: 89%; } }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) and (max-width: 991px) {
     .market-size {
       width: 100%; } }
-
-.card {
-  padding: 0;
-  width: 100%;
-  background-color: #ABDFFB; }
-
-.card-header {
-  background-color: #C8E9FB; }
 
 footer {
   padding-top: 1%;
@@ -105,16 +105,125 @@ footer {
   font-size: larger;
   border-top: solid 1px #000000; }
 
-img {
-  margin-top: 5%;
-  width: 100%;
-  border: solid 2px #000000; }
-  @media (min-width: 768px) {
-    img {
-      width: 95%; } }
-  @media (min-width: 992px) {
-    img {
-      width: 100%; } }
+h1 {
+  padding-top: 5%; }
+
+.btn {
+  border: solid 1px grey;
+  margin-top: 10%;
+  color: black; }
+
+.button {
+  width: 150px; }
+
+.display-4 {
+  font-size: 2rem; }
+
+.padding1 {
+  padding-left: 4%; }
+  @media (max-width: 767px) {
+    .padding1 {
+      padding-left: 1%; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .padding1 {
+      padding-left: 5%; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .padding1 {
+      padding-left: 3%; } }
+
+.padding2 {
+  padding-top: 8%; }
+
+.padding3 {
+  padding-top: 3%; }
+
+@media (max-width: 767px) {
+  .padding4 {
+    padding-top: 1%;
+    padding-bottom: 2%; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  .padding4 {
+    padding-top: 0%;
+    padding-bottom: 0%; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .padding4 {
+    padding-top: 1%; } }
+
+.refresh {
+  padding-left: 23%;
+  width: 150px; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .refresh {
+      padding-left: 22%;
+      padding-top: 5%; } }
+
+.select {
+  margin-top: 10%; }
+  @media (max-width: 767px) {
+    .select {
+      width: 20%; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .select {
+      padding-left: 10%; } }
+
+a {
+  color: black; }
+
+.mar1 {
+  margin-top: 2%; }
+  @media (max-width: 767px) {
+    .mar1 {
+      margin-top: 6%; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .mar1 {
+      margin-top: 2%; } }
+
+.mar2 {
+  margin-bottom: 5%; }
+
+@media (max-width: 767px) {
+  .mar3 {
+    margin-left: 4%; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  .mar3 {
+    margin-left: 5%; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .mar3 {
+    margin-left: 25%; } }
+
+@media (max-width: 767px) {
+  .mar4 {
+    margin-left: 2%; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  .mar4 {
+    margin-left: 1%; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .mar4 {
+    margin-left: 1%; } }
+
+@media (max-width: 767px) {
+  .mar5 {
+    margin-top: 6%; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  .mar5 {
+    margin-top: 0%; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .mar6 {
+    margin-left: 4%; } }
+
+@media (max-width: 767px) {
+  .mar7 {
+    margin-left: 6%; } }
+
+.underline {
+  text-decoration: underline; }
+
+.text-right {
+  padding-right: 5%; }
+
+.retun-pad-btm {
+  padding-bottom: 3%; }
 
 #market .x.axis text {
   font-size: 10px;
@@ -151,123 +260,25 @@ img {
 
 #selectMenu {
   width: 100%; }
-  @media (min-width: 768px) {
+  @media (max-width: 767px) {
     #selectMenu {
-      width: 25%; } }
-  @media (min-width: 992px) {
+      width: 25%;
+      padding-left: 6%; } }
+  @media (min-width: 768px) and (max-width: 991px) {
     #selectMenu {
       padding-left: 2%; } }
 
-h1 {
-  padding-top: 5%; }
-
-.btn {
-  border: solid 1px grey;
-  margin-top: 10%;
-  color: black; }
-
-.button {
-  width: 150px; }
-
-.display-4 {
-  font-size: 2rem; }
-
-.padding1 {
-  padding-left: 3%; }
-  @media (min-width: 768px) {
-    .padding1 {
-      padding-left: 1%; } }
-  @media (min-width: 992px) {
-    .padding1 {
-      padding-left: 5%; } }
-
-.padding2 {
-  padding-top: 8%; }
-
-.padding3 {
-  padding-top: 3%; }
-
-.padding4 {
-  padding-top: 10%; }
-  @media (min-width: 768px) {
-    .padding4 {
-      padding-bottom: 2%; } }
-  @media (min-width: 992px) {
-    .padding4 {
-      padding-top: 0%;
-      padding-bottom: 0%; } }
-
-.refresh {
-  padding-left: 20%;
-  width: 150px; }
-  @media (min-width: 992px) {
-    .refresh {
-      padding-left: 22%;
-      padding-top: 5%; } }
-
-.select {
-  margin-top: 10%; }
-  @media (min-width: 768px) {
-    .select {
-      width: 20%; } }
-  @media (min-width: 992px) {
-    .select {
-      padding-left: 10%; } }
-
-a {
-  color: black; }
-
-.mar1 {
-  margin-top: 2%; }
-  @media (min-width: 768px) {
-    .mar1 {
-      margin-top: 6%; } }
-  @media (min-width: 992px) {
-    .mar1 {
-      margin-top: 2%; } }
-
-.mar2 {
-  margin-bottom: 5%; }
-
-@media (min-width: 768px) {
-  .mar3 {
-    margin-left: 4%; } }
-@media (min-width: 992px) {
-  .mar3 {
-    margin-left: 5%; } }
-@media (min-width: 1800px) {
-  .mar3 {
-    margin-left: 25%; } }
-
-@media (min-width: 768px) {
-  .mar4 {
-    margin-left: 2%; } }
-@media (min-width: 992px) {
-  .mar4 {
-    margin-left: 1%; } }
-@media (min-width: 1800px) {
-  .mar4 {
-    margin-left: 1%; } }
-
-@media (min-width: 768px) {
-  .mar5 {
-    margin-top: 6%; } }
-@media (min-width: 992px) {
-  .mar5 {
-    margin-top: 0%; } }
-
-@media (min-width: 992px) {
-  .mar6 {
-    margin-left: 4%; } }
-
-.underline {
-  text-decoration: underline; }
-
-.text-right {
-  padding-right: 5%; }
-
-.retun-pad-btm {
-  padding-bottom: 3%; }
+img {
+  margin-top: 5%;
+  width: 100%;
+  border: solid 2px #000000; }
+  @media (max-width: 767px) {
+    img {
+      width: 95%;
+      margin-left: 2%; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    img {
+      width: 100%; } }
 
 body {
   background-color: #C1F5FB;
