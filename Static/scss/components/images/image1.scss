@@ -3,8 +3,9 @@ img{
     width:100%;
     border: solid 2px $black;
     
-    @include phone {
+    @include mobile {
         width: 95%;
+        margin-left: 2%;
     }
     
     @include tab {
