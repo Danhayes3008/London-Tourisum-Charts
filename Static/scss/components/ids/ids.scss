@@ -41,8 +41,9 @@
 #selectMenu{
     width: 100%;
     
-    @include phone{
+    @include mobile{
         width: 25%;
+        padding-left: 6%;
     }
     
     @include tab {
