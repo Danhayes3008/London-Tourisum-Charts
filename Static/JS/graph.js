@@ -265,7 +265,7 @@ function CountryOfOrigin(ndx) {
     console.log(group.all());
 
     dc.barChart("#market")
-        .width(1100)
+        .width(900)
         .height(500)
         .colorAccessor(function(d) { return d.key[0]; })
         .colors(typeColors)
