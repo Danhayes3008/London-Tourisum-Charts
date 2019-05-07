@@ -15,17 +15,15 @@
   padding: 0;
   width: 100%;
   height: 100%;
-  border: solid 1px; }
+  border: solid 2px; }
   @media (max-width: 767px) {
     .selectMenu-size {
       width: 93%; } }
 
 .reason-size {
   margin: 1%;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  border: solid 1px; }
+  padding: 0%;
+  border: solid 2px; }
   @media (max-width: 767px) {
     .reason-size {
       width: 89%; } }
@@ -38,7 +36,7 @@
   padding: 0;
   width: 100%;
   height: 100%;
-  border: solid 1px;
+  border: solid 2px;
   text-align: center; }
   @media (max-width: 767px) {
     .spend-size {
@@ -49,7 +47,7 @@
   padding: 0;
   width: 100%;
   height: 100%;
-  border: solid 1px;
+  border: solid 2px;
   text-align: center; }
   @media (max-width: 767px) {
     .visits-size {
@@ -57,9 +55,8 @@
 
 .arrival-size {
   margin: 1%;
-  height: 100%;
   padding: 0;
-  border: solid 1px; }
+  border: solid 2px; }
   @media (max-width: 767px) {
     .arrival-size {
       width: 89%; } }
@@ -68,7 +65,7 @@
   margin: 1%;
   height: 100%;
   padding: 0;
-  border: solid 1px; }
+  border: solid 2px; }
   @media (max-width: 767px) {
     .country-size {
       width: 89%; } }
@@ -78,7 +75,7 @@
   padding: 0;
   width: 100%;
   height: 100%;
-  border: solid 1px; }
+  border: solid 2px; }
   @media (max-width: 767px) {
     .VPC-size {
       width: 89%; } }
@@ -89,9 +86,7 @@
 .market-size {
   margin: 1%;
   padding: 0;
-  width: 100%;
-  height: 100%;
-  border: solid 1px; }
+  border: solid 2px; }
   @media (max-width: 767px) {
     .market-size {
       width: 89%; } }
@@ -153,7 +148,7 @@ a {
 
 @media (max-width: 767px) {
   .mar3 {
-    margin-left: 4%; } }
+    margin-left: 2%; } }
 @media (min-width: 768px) and (max-width: 991px) {
   .mar3 {
     margin-left: 5%; } }
@@ -181,7 +176,14 @@ a {
 
 @media (max-width: 767px) {
   .mar7 {
-    margin-left: 6%; } }
+    margin-left: 3%; } }
+
+@media (max-width: 767px) {
+  .mar8 {
+    margin-left: 0%; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  .mar8 {
+    margin-left: 5%; } }
 
 .underline {
   text-decoration: underline; }
@@ -189,6 +191,9 @@ a {
 @media (max-width: 767px) {
   footer {
     width: 100%; } }
+
+.crd {
+  border: solix 1px; }
 
 #market .x.axis text {
   font-size: 10px;
@@ -207,8 +212,16 @@ a {
   padding-left: 0; }
 
 #country {
-  padding-bottom: 5%;
-  padding-top: 5%; }
+  padding-bottom: 25%;
+  padding-top: 25%; }
+  @media (max-width: 767px) {
+    #country {
+      padding-bottom: 0%;
+      padding-top: 0%; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    #country {
+      padding-bottom: 5%;
+      padding-top: 5%; } }
 
 #VPC {
   padding-left: 15%; }
@@ -240,7 +253,7 @@ img {
   @media (max-width: 767px) {
     img {
       width: 95%;
-      margin-left: 2%; } }
+      margin-left: 0%; } }
   @media (min-width: 768px) and (max-width: 991px) {
     img {
       width: 100%; } }
@@ -269,22 +282,34 @@ img {
     .padding3 {
       padding-top: 5%; } }
 
-@media (max-width: 767px) {
-  .padding4 {
-    padding-top: 1%;
-    padding-bottom: 2%; } }
-@media (min-width: 768px) and (max-width: 991px) {
-  .padding4 {
-    padding-top: 0%;
-    padding-bottom: 0%; } }
-@media (min-width: 992px) and (max-width: 1199px) {
-  .padding4 {
-    padding-top: 0%;
-    padding-left: 2%; } }
+.padding4 {
+  padding-left: 13%; }
+  @media (max-width: 767px) {
+    .padding4 {
+      padding-top: 1%;
+      padding-bottom: 2%; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .padding4 {
+      padding-top: 0%;
+      padding-bottom: 0%; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .padding4 {
+      padding-top: 0%;
+      padding-left: 2%; } }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .padding5 {
     padding-top: 9%; } }
+
+@media (max-width: 767px) {
+  .padding6 {
+    padding-left: 1%; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  .padding6 {
+    padding-left: 5%; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .padding6 {
+    padding-left: 0%; } }
 
 .text-right {
   padding-right: 5%; }
