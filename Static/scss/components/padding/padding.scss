@@ -32,6 +32,7 @@
 
 
 .padding4{
+    padding-left: 13%;
     
     @include mobile {
         padding-top: 1%;
@@ -52,6 +53,19 @@
 .padding5{
     @include computer{
         padding-top: 9%;
+    }
+}
+
+.padding6{
+     @include mobile {
+        padding-left: 1%;
+    }
+    @include tab{
+        padding-left: 5%;
+    }
+    
+    @include computer{
+        padding-left: 0%;
     }
 }
 
