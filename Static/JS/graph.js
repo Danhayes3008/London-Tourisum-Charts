@@ -127,10 +127,10 @@ function showReasonForVisit(ndx) {
 
     dc.barChart("#reason")
         .width(600)
-        .height(500)
+        .height(400)
         .colorAccessor(function(d) { return d.key[0]; })
         .colors(typeColors)
-        .margins({ top: 40, right: 50, bottom: 40, left: 80 })
+        .margins({ top: 20, right: 50, bottom: 40, left: 50 })
         .useViewBoxResizing(true)
         .dimension(reasonDim)
         .group(group)
@@ -248,7 +248,7 @@ function visitsPerCountry(ndx) {
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .legend(dc.legend().x(420).y(50).itemHeight(15).gap(5))
-        .margins({top: 60, right: 100, bottom: 80, left: 20})
+        .margins({top: 20, right: 100, bottom: 50, left: 20})
         .useViewBoxResizing(true)
         .colors(typeColors);
 }
