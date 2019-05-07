@@ -17,47 +17,6 @@ h1{
     font-size: 2rem;
 }
 
-.padding1{
-    padding-left: 4%;
-    @include mobile {
-        padding-left: 1%;
-    }
-    
-    @include tab{
-        padding-left: 5%;
-    }
-    
-    @include computer{
-        padding-left: 3%;
-    }
-}
-
-.padding2{
-    padding-top: 8%;
-}
-
-.padding3{
-    padding-top: 3%;
-    
-}
-
-.padding4{
-    
-    @include mobile {
-        padding-top: 1%;
-        padding-bottom: 2%;
-    }
-    
-    @include tab{
-        padding-top: 0%;
-        padding-bottom: 0%;
-    }
-    
-    @include computer{
-        padding-top: 1%;
-    }
-}
-
 .refresh{
   padding-left: 23%;
   width: 150px;
@@ -109,9 +68,9 @@ a{
         margin-left: 5%;
     }
     
-    @include computer{
-        margin-left: 25%;
-    }
+    // @include computer{
+    //     margin-left: 25%;
+    // }
 }
 
 .mar4{
@@ -155,10 +114,8 @@ a{
     text-decoration: underline;
 }
 
-.text-right{
-    padding-right: 5%;
-}
-
-.retun-pad-btm{
-    padding-bottom: 3%;
+footer{
+    @include mobile{
+        width: 100%;
+    }
 }
