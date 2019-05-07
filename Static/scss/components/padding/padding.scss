@@ -1,0 +1,70 @@
+.padding1{
+    padding-left: 4%;
+    
+    @include mobile {
+        padding-left: 1%;
+    }
+    
+    @include tab{
+        padding-left: 5%;
+    }
+    
+    @include computer{
+        padding-left: 0%;
+    }
+}
+
+.padding2{
+    padding-top: 8%;
+    @include computer{
+        padding-top: 6%;
+    }
+}
+
+.padding3{
+    padding-top: 3%;
+    
+    @include computer{
+        padding-top: 5%;
+    }
+    
+}
+
+
+.padding4{
+    
+    @include mobile {
+        padding-top: 1%;
+        padding-bottom: 2%;
+    }
+    
+    @include tab{
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
+    
+    @include computer{
+        padding-top: 0%;
+        padding-left: 2%;
+    }
+}
+
+.padding5{
+    @include computer{
+        padding-top: 9%;
+    }
+}
+
+.text-right{
+    padding-right: 5%;
+}
+
+.retun-pad-btm{
+    padding-bottom: 3%;
+}
+
+.chart-body{
+    @include computer{
+        padding-top: 15%;
+    }
+}
