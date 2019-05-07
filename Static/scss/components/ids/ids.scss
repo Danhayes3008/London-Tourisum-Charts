@@ -18,8 +18,18 @@
     padding-left: 0;
 }
 #country{
-    padding-bottom: 5%;
-    padding-top: 5%;
+    padding-bottom: 25%;
+    padding-top: 25%;
+    
+    @include mobile {
+        padding-bottom: 0%;
+        padding-top: 0%;
+    }
+    
+    @include tab {
+        padding-bottom: 5%;
+        padding-top: 5%;
+    }
 }
     
 #VPC{
