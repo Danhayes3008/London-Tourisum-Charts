@@ -127,10 +127,10 @@ function showReasonForVisit(ndx) {
 
     dc.barChart("#reason")
         .width(600)
-        .height(400)
+        .height(500)
         .colorAccessor(function(d) { return d.key[0]; })
         .colors(typeColors)
-        .margins({ top: 10, right: 50, bottom: 40, left: 80 })
+        .margins({ top: 40, right: 50, bottom: 40, left: 80 })
         .useViewBoxResizing(true)
         .dimension(reasonDim)
         .group(group)
@@ -233,7 +233,7 @@ function visitsPerCountry(ndx) {
     
     dc.barChart("#VPC")
         .width(500)
-        .height(400)
+        .height(500)
         .dimension(dim)
         .group(tunnelOfArrival, "Air")
         .stack(airOfArrival, "Tunnel")
@@ -248,7 +248,7 @@ function visitsPerCountry(ndx) {
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .legend(dc.legend().x(420).y(50).itemHeight(15).gap(5))
-        .margins({top: 10, right: 100, bottom: 80, left: 20})
+        .margins({top: 60, right: 100, bottom: 80, left: 20})
         .useViewBoxResizing(true)
         .colors(typeColors);
 }
@@ -265,7 +265,7 @@ function CountryOfOrigin(ndx) {
     console.log(group.all());
 
     dc.barChart("#market")
-        .width(900)
+        .width(1100)
         .height(500)
         .colorAccessor(function(d) { return d.key[0]; })
         .colors(typeColors)
