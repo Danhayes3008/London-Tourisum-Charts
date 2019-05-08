@@ -248,7 +248,7 @@ function visitsPerCountry(ndx) {
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .legend(dc.legend().x(420).y(50).itemHeight(15).gap(5))
-        .margins({top: 20, right: 100, bottom: 50, left: 20})
+        .margins({top: 20, right: 100, bottom: 60, left: 10})
         .useViewBoxResizing(true)
         .colors(typeColors);
 }
