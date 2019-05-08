@@ -18,12 +18,16 @@ h1{
 }
 
 .refresh{
-  padding-left: 23%;
+  padding-left: 28%;
+  padding-top: 3%;
   width: 150px;
 
  
   @include tab{
       padding-left: 22%;
+      padding-top: 5%;
+  }
+  @include computer{
       padding-top: 5%;
   }
 }
