@@ -30,6 +30,11 @@
         padding-bottom: 5%;
         padding-top: 5%;
     }
+    
+    @include computer {
+        padding-bottom: 0%;
+        padding-top: 0%;
+    }
 }
     
 #VPC{
