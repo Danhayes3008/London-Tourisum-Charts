@@ -59,7 +59,7 @@ a{
     }
 }
 .mar2{
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
 
 .mar3{
@@ -136,4 +136,23 @@ footer{
 
 .container1{
     //this class is a bypass for a problem im having with my border in the Method of Arrival chart.
+}
+
+.p{
+    font-size: 30px;
+    padding-top: 5%;
+    padding-left: 2%;
+    
+    @include computer{
+        font-size: 25px;
+    }
+}
+
+.p1{
+    font-size: 30px;
+    padding-left: 2%;
+    
+    @include computer{
+        font-size: 25px;
+    }
 }
