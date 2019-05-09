@@ -148,7 +148,7 @@ function showReasonForVisit(ndx) {
 function showMethodOfArrival(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["Tunnel", "Sea", "Air"])
-        .range(["#54C3D2", "#54A0D2", "#D26D54", "#54D291"]);
+        .range(["#ad462d", "#3baa71", "#0b7bc4"]);
     var arrivalDim = ndx.dimension(dc.pluck("mode"));
     var methodOfArrival = arrivalDim.group();
 
@@ -174,7 +174,7 @@ function showMethodOfArrival(ndx) {
 function showCountryOfOrigin(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["Business", "Holiday", "Study", "Miscellaneous", "VFR"])
-        .range(["#65D254", "#54C3D2", "#54A0D2", "#D26D54", "#54D291"]);
+        .range(["#57ba48", "#c16a28", "#ad462d", "#3baa71", "#33af8a", "#4a9da8", "#0b7bc4"]);
     var countryDim = ndx.dimension(dc.pluck("purpose"));
     var countryOfOrigin = countryDim.group();
 
@@ -200,7 +200,7 @@ function visitsPerCountry(ndx) {
     
     var typeColors = d3.scale.ordinal()
         .domain(["Air", "Tunnel", "Sea"])
-        .range(["#54A0D2", "#54C3D2", "#65D254"])
+        .range(["#57ba48", "#c16a28", "#ad462d", "#3baa71", "#33af8a", "#4a9da8", "#0b7bc4"])
 
     function modeArrivedBy (dimension, mode) {
         return dimension.group().reduce(
@@ -258,7 +258,7 @@ function visitsPerCountry(ndx) {
 function CountryOfOrigin(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["market"])
-        .range(["#65D254", "#D28B54", "#D26D54", "#54D291", "#54D2AC", "#54C3D2", "#54A0D2"]);
+        .range(["#57ba48", "#c16a28", "#ad462d", "#3baa71", "#33af8a", "#4a9da8", "#0b7bc4"]);
     var countryDim = ndx.dimension(dc.pluck('market'));
     var group = countryDim.group();
 
