@@ -153,7 +153,7 @@ a {
       margin-top: 2%; } }
 
 .mar2 {
-  margin-bottom: 5%; }
+  margin-bottom: 2%; }
 
 @media (max-width: 767px) {
   .mar3 {
@@ -203,6 +203,21 @@ a {
 
 .crd {
   border: solix 1px; }
+
+.p {
+  font-size: 30px;
+  padding-top: 5%;
+  padding-left: 2%; }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .p {
+      font-size: 25px; } }
+
+.p1 {
+  font-size: 30px;
+  padding-left: 2%; }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .p1 {
+      font-size: 25px; } }
 
 #market .x.axis text {
   font-size: 10px;
