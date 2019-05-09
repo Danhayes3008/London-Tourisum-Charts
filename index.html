@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />-->
+    <link rel="stylesheet" href="Static/CSS/animista.css" />
     <link rel="stylesheet" href="Static/CSS/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="Static/CSS/dc.min.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -38,6 +38,8 @@
         <!--simple image to give the dashboard less of a plain look to it-->
         <div class="container">
             <img src="Static/Images/Westminster.jpg"></img>
+            <p class="p">Welcome to the Visits to London Dashboard. This Dashboard is for coralating the data from our database.
+             A servay was done between 2002 to 2017. This servay was made conducted over 63 country's from Argentina to USA.</p>
         </div>
         <!--this container holds the country selector and total spent and total visited sections-->
         <div class="mar1 container">
@@ -46,7 +48,7 @@
                     <div class="row spend-size">
                         <div class="card">
                             <h4 class="card-header text-center ">Total Spend</h4>
-                            <div class="display-4" id="spent">£</div>
+                            <div class="display-4 flip-2-hor-top-1" id="spent">£</div>
                             <div class="display-4">Million</div>
                         </div>
                     </div>
@@ -67,12 +69,16 @@
                     <div class="row visits-size">
                         <div class="card">
                             <h4 class="card-header text-center">Total Visited</h4>
-                            <div class="display-4" id="visits"></div>
+                            <div class="flip-2-hor-top-1 display-4" id="visits"></div>
                             <div class="display-4">Thousand</div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="container">
+            <p class="p">Above we can see the total spend of all visits from 2002 to 2017. This data is 1 for every one million pounds.
+             The same is said for the total visits, this is rounded up and is 1 for every one thousand visits.</p>
         </div>
         <!--this is just a simple chart showing total visits of each country in the dataset-->
         <div class="mar1 mar7 padding6 container">
@@ -88,6 +94,11 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="container">
+            <p class="p">Here we can see how many people visited London for the fifteen years from all the 
+            country's listed in the database. This chart shows that the most visters came from France followed 
+            by USA, and the least was from the other unknown area's.</p>
         </div>
         <!--this container holds the charts relating to method of arrival-->
         <div class="mar1 mar3 container">
@@ -112,6 +123,11 @@
                 </div>
             </div>
         </div>
+        <div class="container">
+            <p class="p">These two charts are to show how many they arrived. This is shown in both a bar-chart 
+            and a pie chart. This is so you can see both the percentages showing prefered method, and the total 
+            that traveled using each specific method for the fifteen years in the database.</p>
+        </div>
         <!--this section shows us how many visited london and what reason they had for there visit -->
         <div class="mar1 mar2 mar3 container">
             <div class="row">
@@ -134,6 +150,11 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="container">
+            <p class="p1">The above two charts pertain to the reason people visited during the fifteen years.
+             These charts show that more people visited London for a holiday than anything. They also show that 
+             the prefered method to travel to London was by plain.</p>
         </div>
     </main>
     <footer>
