@@ -1,10 +1,10 @@
 .card {
   padding: 0;
   width: 100%;
-  background-color: #ABDFFB; }
+  background-color: #3664f9; }
 
 .card-header {
-  background-color: #C8E9FB; }
+  background-color: #6b8aef; }
 
 .container-size {
   margin: 0;
@@ -101,7 +101,7 @@
 
 footer {
   padding-top: 1%;
-  background-color: #C8E9FB;
+  background-color: #6b8aef;
   font-size: larger;
   border-top: solid 1px #000000; }
 
@@ -339,7 +339,7 @@ img {
     padding-top: 15%; } }
 
 body {
-  background-color: #C1F5FB;
+  background-color: #359bce;
   font-family: 'Courgette', cursive;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Lato', sans-serif; }
