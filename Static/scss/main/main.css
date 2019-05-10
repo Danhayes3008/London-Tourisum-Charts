@@ -20,21 +20,6 @@
     .selectMenu-size {
       width: 93%; } }
 
-.reason-size {
-  margin: 1%;
-  padding: 0%;
-  border: solid 2px; }
-  @media (max-width: 767px) {
-    .reason-size {
-      width: 89%; } }
-  @media (min-width: 768px) and (max-width: 991px) {
-    .reason-size {
-      width: 100%; } }
-  @media (min-width: 992px) and (max-width: 1199px) {
-    .reason-size {
-      width: 100%;
-      height: 98%; } }
-
 .spend-size {
   margin: 1%;
   padding: 0;
@@ -56,6 +41,21 @@
   @media (max-width: 767px) {
     .visits-size {
       width: 93%; } }
+
+.reason-size {
+  margin: 1%;
+  padding: 0%;
+  border: solid 2px; }
+  @media (max-width: 767px) {
+    .reason-size {
+      width: 89%; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .reason-size {
+      width: 100%; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .reason-size {
+      width: 100%;
+      height: 98%; } }
 
 .arrival-size {
   margin: 1%;
@@ -188,6 +188,15 @@ hr {
   margin-left: 0;
   padding-left: 0; }
 
+#VPC {
+  padding-left: 15%; }
+
+#VPC .x.axis text {
+  text-anchor: end !important;
+  transform: rotate(-45deg);
+  font-size: 10px;
+  font-weight: bold; }
+
 #country {
   padding-bottom: 25%;
   padding-top: 25%; }
@@ -203,15 +212,6 @@ hr {
     #country {
       padding-bottom: 0%;
       padding-top: 0%; } }
-
-#VPC {
-  padding-left: 15%; }
-
-#VPC .x.axis text {
-  text-anchor: end !important;
-  transform: rotate(-45deg);
-  font-size: 10px;
-  font-weight: bold; }
 
 #arrival {
   padding-top: 8%;

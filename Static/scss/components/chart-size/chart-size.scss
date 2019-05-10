@@ -1,8 +1,17 @@
+//This file contains all the styles that styles out the chart sizes aswell as the borders and positioning of the text within them.
+//By Daniel Hayes 10.05.2017
+
+//--------------------------------------------------------------------------------
+
+//This section is for all styles determening the size of the contaier and other tags.
+
 .container-size{
     margin: 0;
     padding:0;
     
 }
+
+// This section contains all the styles that alter the size of my menu selector, total send and total visited boxes.
 
 .selectMenu-size{
     margin:1%;
@@ -15,6 +24,34 @@
         width: 93%;
     }
 }
+.spend-size{
+    margin: 1%;
+    padding:0;
+    width: 100%;
+    height:100%;
+    border: solid 2px;
+    text-align: center;
+    
+    @include mobile{
+        width: 93%;
+    }
+}
+.visits-size{
+    margin: 1%;
+    padding:0;
+    width:100%;
+    height:100%;
+    border: solid 2px;
+    text-align: center;
+    
+    @include mobile{
+        width: 93%;
+    }
+}
+
+//--------------------------------------------------------------------------------
+
+//This section is for all styles determening the size of the charts.
 
 .reason-size{
     margin: 1%;
@@ -33,33 +70,6 @@
         height: 98%;
     }
 }
-
-.spend-size{
-    margin: 1%;
-    padding:0;
-    width: 100%;
-    height:100%;
-    border: solid 2px;
-    text-align: center;
-    
-    @include mobile{
-        width: 93%;
-    }
-}
-
-.visits-size{
-    margin: 1%;
-    padding:0;
-    width:100%;
-    height:100%;
-    border: solid 2px;
-    text-align: center;
-    
-    @include mobile{
-        width: 93%;
-    }
-}
-
 .arrival-size{
     margin: 1%;
     padding:0;
@@ -69,7 +79,6 @@
         width: 89%;
     }
 }
-
 .country-size{
     margin: 1%;
     height: 100%;
@@ -80,7 +89,6 @@
         width: 89%;
     }
 }
-
 .VPC-size{
     margin: 1%;
     padding:0;
@@ -96,7 +104,6 @@
         width: 100%;
     }
 }
-
 .market-size{
     margin: 1%;
     width: 100%;

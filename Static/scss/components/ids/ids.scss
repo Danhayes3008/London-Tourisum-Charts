@@ -1,22 +1,42 @@
+//This file contains all the styles that deals with all the charts by linking to the id's.
+//By Daniel Hayes 10.05.2017
+
+//--------------------------------------------------------------------------------
+
+//This section is for all styles linked to the market id.
+
 #market .x.axis text {
     font-size: 10px;
     margin-top: 10px;
     padding: 10px;
 }
-
 #market svg g.axis.x g.tick text {
     transform: translateY(20px);
     transform: rotate(-45deg);
     text-anchor: end !important;
     
 }
-
 #reason .x.axis text {
     text-anchor: middle !important;
     font-size: 20px;
     margin-left: 0;
     padding-left: 0;
 }
+
+//This section is for all the styles linked to the VPC id.
+
+#VPC{
+    padding-left:15%;
+}
+#VPC .x.axis text{
+    text-anchor: end !important;
+    transform: rotate(-45deg);
+    font-size: 10px;
+    font-weight: bold;
+}
+
+//This section containes the remainder of the styles for all the id's
+
 #country{
     padding-bottom: 25%;
     padding-top: 25%;
@@ -36,23 +56,10 @@
         padding-top: 0%;
     }
 }
-    
-#VPC{
-    padding-left:15%;
-}
-
-#VPC .x.axis text{
-    text-anchor: end !important;
-    transform: rotate(-45deg);
-    font-size: 10px;
-    font-weight: bold;
-}
-
 #arrival{
     padding-top:8%;
     padding-bottom:2%;
 }
-
 #selectMenu{
     width: 100%;
     

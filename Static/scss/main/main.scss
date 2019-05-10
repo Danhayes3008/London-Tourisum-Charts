@@ -1,5 +1,12 @@
+// In this file you will fins all the imports needed to make this dashboard work, aswell as the styles for the main body of the page.
+// By Daniel Hayes 10.05.2017
+
+//This section contains all the imports from my variables folder.
+
 @import "../variables/colors/colors.scss";
 @import "../variables/media-queries/media-queries.scss";
+
+//This section contains all the imports from my components folder.
 
 @import "../components/cards/cards.scss";
 @import "../components/chart-size/chart-size.scss";
