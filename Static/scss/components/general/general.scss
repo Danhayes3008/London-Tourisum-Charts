@@ -1,22 +1,39 @@
+//This file contains all the styles that dont need there own files.
+//By Daniel Hayes 10.05.2017 16:49
+
+//--------------------------------------------------------------------------------
+
+//This section is for all styles linked to tags.
+
+a{
+    color: black;
+}
+footer{
+    @include mobile{
+        width: 100%;
+    }
+}
 h1{
     padding-top: 5%;
 }
+hr{
+    width: 15%;
+    background-color: $black;
+}
+
+//--------------------------------------------------------------------------------
+
+//This section contains all the styles linked to the refresh button.
 
 .btn{
     border: solid 1px grey;
     margin-top: 10%;
     color: black;
 }
-
 .button{
     width: 150px;
     
 }
-
-.display-4 {
-    font-size: 2rem;
-}
-
 .refresh{
   padding-left: 28%;
   padding-top: 3%;
@@ -31,7 +48,6 @@ h1{
       padding-top: 5%;
   }
 }
-
 .select{
     margin-top: 10%;
     
@@ -43,24 +59,19 @@ h1{
     }
 }
 
-a{
-    color: black;
-}
+//--------------------------------------------------------------------------------
+
+//this section contains styles are for styling out anything inside the containers
 
 .underline{
     text-decoration: underline;
 }
-
-footer{
-    @include mobile{
-        width: 100%;
-    }
+.display-4 {
+    font-size: 2rem;
 }
-
 .crd{
     border: solix 1px;
 }
-
 .p{
     font-size: 30px;
     padding-top: 5%;
@@ -70,7 +81,6 @@ footer{
         font-size: 25px;
     }
 }
-
 .p1{
     font-size: 30px;
     padding-left: 2%;
@@ -80,7 +90,3 @@ footer{
     }
 }
 
-hr{
-    width: 15%;
-    background-color: $black;
-}
