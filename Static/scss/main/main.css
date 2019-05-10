@@ -182,6 +182,9 @@ hr {
   transform: rotate(-45deg);
   text-anchor: end !important; }
 
+#market-clip rect {
+  width: 980px; }
+
 #reason .x.axis text {
   text-anchor: middle !important;
   font-size: 20px;
