@@ -16,6 +16,15 @@
     text-anchor: end !important;
     
 }
+
+//This #market-clip fixed the market chart when the end bar is not showing.
+
+#market-clip{
+    rect{
+        width: 980px;
+    }
+}
+
 #reason .x.axis text {
     text-anchor: middle !important;
     font-size: 20px;
