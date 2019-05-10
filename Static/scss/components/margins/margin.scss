@@ -1,0 +1,76 @@
+//this file contains all the margins used to style my dashboard
+//By Daniel Hayes 10.05.2017 16:34
+
+
+.mar1{
+    margin-top: 2%;
+    
+    @include mobile{
+        margin-top: 6%;
+    }
+    
+    @include tab {
+        margin-top: 2%;
+    }
+}
+.mar2{
+    margin-bottom: 2%;
+}
+
+.mar3{
+    
+    @include mobile{
+    margin-left: 2%;
+    }
+    
+    @include tab {
+        margin-left: 5%;
+    }
+}
+
+.mar4{
+    
+    @include mobile{
+    margin-left: 2%;
+    }
+    
+    @include tab {
+        margin-left: 1%;
+    }
+    
+    @include computer{
+        margin-left: 1%;
+    }
+}
+
+.mar5{
+    @include mobile{
+        margin-top: 6%;
+    }
+    
+    @include tab{
+        margin-top: 0%;
+    }
+}
+
+.mar6{
+    @include tab{
+        margin-left: 4%;
+    }
+}
+
+.mar7{
+    @include mobile{
+        margin-left: 3%;
+    }
+}
+
+.mar8{
+    @include mobile{
+    margin-left: 0%;
+    }
+    
+    @include tab {
+        margin-left: 5%;
+    }
+}
