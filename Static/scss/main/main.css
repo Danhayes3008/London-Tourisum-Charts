@@ -105,8 +105,19 @@ footer {
   font-size: larger;
   border-top: solid 1px #000000; }
 
+a {
+  color: black; }
+
+@media (max-width: 767px) {
+  footer {
+    width: 100%; } }
+
 h1 {
   padding-top: 5%; }
+
+hr {
+  width: 15%;
+  background-color: #000000; }
 
 .btn {
   border: solid 1px grey;
@@ -115,9 +126,6 @@ h1 {
 
 .button {
   width: 150px; }
-
-.display-4 {
-  font-size: 2rem; }
 
 .refresh {
   padding-left: 28%;
@@ -140,15 +148,11 @@ h1 {
     .select {
       padding-left: 10%; } }
 
-a {
-  color: black; }
-
 .underline {
   text-decoration: underline; }
 
-@media (max-width: 767px) {
-  footer {
-    width: 100%; } }
+.display-4 {
+  font-size: 2rem; }
 
 .crd {
   border: solix 1px; }
@@ -167,10 +171,6 @@ a {
   @media (min-width: 992px) and (max-width: 1199px) {
     .p1 {
       font-size: 25px; } }
-
-hr {
-  width: 15%;
-  background-color: #000000; }
 
 #market .x.axis text {
   font-size: 10px;
