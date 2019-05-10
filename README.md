@@ -194,4 +194,11 @@ some time with me when he was already busy trying to help me sort out my problem
 me country of origin chart. After whilst throwing back and forward possible fixes Tom found a way to make the text
 work.
 
+<strong>Simen Daehlin</strong>
+-
+
+<a href="https://github.com/Eventyret">Simen Daehlin</a> has helped me out in a big way, after asking for some feedback he has introduced me to some website with libarys
+that can improve my project a great deal. The sites he shown me were: <a href="https://coolors.co/aaabbc-8b8982-373f47-6c91c2-c3c9e9">coolers.co
+</a>, <a href="http://animista.net/">Animista</a> and <a href="https://introjs.com/">introjs.com</a>.
+
 image is from Wikipidia
