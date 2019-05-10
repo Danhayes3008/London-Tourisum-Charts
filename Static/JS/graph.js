@@ -121,7 +121,7 @@ function showTotalVisits(ndx){
 function showReasonForVisit(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["Tunnel", "Sea", "Air"])
-        .range(["#54C3D2", "#54A0D2", "#D26D54", "#54D291"]);
+        .range(["#AAABBC", "#8B8982", "#373F47"]);
     var reasonDim = ndx.dimension(dc.pluck('mode'));
     var group = reasonDim.group();
 
@@ -148,7 +148,7 @@ function showReasonForVisit(ndx) {
 function showMethodOfArrival(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["Tunnel", "Sea", "Air"])
-        .range(["#ad462d", "#3baa71", "#0b7bc4"]);
+        .range(["#AAABBC", "#8B8982", "#373F47"]);
     var arrivalDim = ndx.dimension(dc.pluck("mode"));
     var methodOfArrival = arrivalDim.group();
 
@@ -174,7 +174,7 @@ function showMethodOfArrival(ndx) {
 function showCountryOfOrigin(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["Business", "Holiday", "Study", "Miscellaneous", "VFR"])
-        .range(["#57ba48", "#c16a28", "#ad462d", "#3baa71", "#33af8a", "#4a9da8", "#0b7bc4"]);
+        .range(["#AAABBC", "#8B8982", "#373F47", "#6C91C2", "#C3C9E9"]);
     var countryDim = ndx.dimension(dc.pluck("purpose"));
     var countryOfOrigin = countryDim.group();
 
@@ -200,7 +200,7 @@ function visitsPerCountry(ndx) {
     
     var typeColors = d3.scale.ordinal()
         .domain(["Air", "Tunnel", "Sea"])
-        .range(["#57ba48", "#c16a28", "#ad462d", "#3baa71", "#33af8a", "#4a9da8", "#0b7bc4"])
+        .range(["#AAABBC", "#8B8982", "#373F47"])
 
     function modeArrivedBy (dimension, mode) {
         return dimension.group().reduce(
@@ -258,7 +258,7 @@ function visitsPerCountry(ndx) {
 function CountryOfOrigin(ndx) {
     var typeColors = d3.scale.ordinal()
         .domain(["market"])
-        .range(["#57ba48", "#c16a28", "#ad462d", "#3baa71", "#33af8a", "#4a9da8", "#0b7bc4"]);
+        .range(["#AAABBC", "#8B8982", "#373F47", "#6C91C2", "#C3C9E9"]);
     var countryDim = ndx.dimension(dc.pluck('market'));
     var group = countryDim.group();
 
