@@ -77,6 +77,10 @@ hr{
     padding-top: 5%;
     padding-left: 2%;
     
+    @include mobile{
+        font-size: 15px;
+    }
+    
     @include computer{
         font-size: 25px;
     }
@@ -84,6 +88,10 @@ hr{
 .p1{
     font-size: 30px;
     padding-left: 2%;
+    
+    @include mobile{
+        font-size: 15px;
+    }
     
     @include computer{
         font-size: 25px;
