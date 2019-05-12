@@ -65,24 +65,24 @@ and comments that i used when i originally pushed them to git-hub.
 <strong>Technology’s:</strong>
 -
 
-<a href="https://en.wikipedia.org/wiki/HTML" target="-blank"><strong>HTML</strong></a> 
+<a href="https://en.wikipedia.org/wiki/HTML" target="_blank"><strong>HTML</strong></a> 
 - 
 This is the standard language for making websites.
 
-<a href="https://en.wikipedia.org/wiki/Sass_(stylesheet_language)#SCSS" target="-blank"><strong>SCSS</strong></a>
+<a href="https://en.wikipedia.org/wiki/Sass_(stylesheet_language)#SCSS" target="_blank"><strong>SCSS</strong></a>
 - 
 In combination with Bootstrap I used my own SCSS files to give the dashboard a personal touch.
 This also allowed me to get the dashboard to work properly on all devices, and to the look i was hoping for.
 
 
-<a href="https://en.wikipedia.org/wiki/JavaScript" target="-blank"><strong>JavaScript</strong></a>
+<a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank"><strong>JavaScript</strong></a>
 -
 JavaScript was used to make all the charts, to do this it required the d3, DC, cross-filter
 JavaScript files as-well as my own graph file that contains the functions for the charts.
 The queue file makes all the JavaScript wait until the dashboard is rendered.
 
 
-<a href=”https://getbootstrap.com” target="-blank"><strong>Bootstrap</strong></a>
+<a href=”https://getbootstrap.com” target="_blank"><strong>Bootstrap</strong></a>
 - 
 I used Bootstrap to give the 
 dashboard a basic styling, supported with my own SCSS files for a personal look.
