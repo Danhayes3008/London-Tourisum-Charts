@@ -79,6 +79,8 @@ hr{
     
     @include mobile{
         font-size: 15px;
+        text-align: center;
+        padding-left: 0%;
     }
     
     @include computer{
@@ -89,6 +91,19 @@ hr{
     font-size: 30px;
     padding-left: 2%;
     
+    @include mobile{
+        width: 90%;
+        font-size: 15px;
+        text-align: center;
+        padding-left: 0%;
+    }
+    
+    @include computer{
+        font-size: 25px;
+    }
+}
+
+.p2{
     @include mobile{
         font-size: 15px;
     }
