@@ -16,7 +16,7 @@
   width: 100%;
   height: 100%;
   border: solid 2px; }
-  @media (max-width: 767px) {
+  @media (max-width: 730px) {
     .selectMenu-size {
       width: 93%; } }
 
@@ -27,7 +27,7 @@
   height: 100%;
   border: solid 2px;
   text-align: center; }
-  @media (max-width: 767px) {
+  @media (max-width: 730px) {
     .spend-size {
       width: 93%; } }
 
@@ -38,7 +38,7 @@
   height: 100%;
   border: solid 2px;
   text-align: center; }
-  @media (max-width: 767px) {
+  @media (max-width: 730px) {
     .visits-size {
       width: 93%; } }
 
@@ -46,10 +46,10 @@
   margin: 1%;
   padding: 0%;
   border: solid 2px; }
-  @media (max-width: 767px) {
+  @media (max-width: 730px) {
     .reason-size {
       width: 89%; } }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 731px) and (max-width: 991px) {
     .reason-size {
       width: 100%; } }
   @media (min-width: 992px) and (max-width: 1199px) {
@@ -61,7 +61,7 @@
   margin: 1%;
   padding: 0;
   border: solid 2px; }
-  @media (max-width: 767px) {
+  @media (max-width: 730px) {
     .arrival-size {
       width: 89%; } }
 
@@ -70,7 +70,7 @@
   height: 100%;
   padding: 0;
   border: solid 2px; }
-  @media (max-width: 767px) {
+  @media (max-width: 730px) {
     .country-size {
       width: 89%; } }
 
@@ -80,10 +80,10 @@
   width: 100%;
   height: 100%;
   border: solid 2px; }
-  @media (max-width: 767px) {
+  @media (max-width: 730px) {
     .VPC-size {
       width: 89%; } }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 731px) and (max-width: 991px) {
     .VPC-size {
       width: 100%; } }
 
@@ -92,10 +92,10 @@
   width: 100%;
   padding: 0;
   border: solid 2px; }
-  @media (max-width: 767px) {
+  @media (max-width: 730px) {
     .market-size {
       width: 89%; } }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 731px) and (max-width: 991px) {
     .market-size {
       width: 100%; } }
 
@@ -108,7 +108,7 @@ footer {
 a {
   color: black; }
 
-@media (max-width: 767px) {
+@media (max-width: 730px) {
   footer {
     width: 100%; } }
 
@@ -131,7 +131,7 @@ hr {
   padding-left: 28%;
   padding-top: 3%;
   width: 150px; }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 731px) and (max-width: 991px) {
     .refresh {
       padding-left: 22%;
       padding-top: 5%; } }
@@ -141,10 +141,10 @@ hr {
 
 .select {
   margin-top: 10%; }
-  @media (max-width: 767px) {
+  @media (max-width: 730px) {
     .select {
       width: 20%; } }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 731px) and (max-width: 991px) {
     .select {
       padding-left: 10%; } }
 
@@ -161,6 +161,11 @@ hr {
   font-size: 30px;
   padding-top: 5%;
   padding-left: 2%; }
+  @media (max-width: 730px) {
+    .p {
+      font-size: 15px;
+      text-align: center;
+      padding-left: 0%; } }
   @media (min-width: 992px) and (max-width: 1199px) {
     .p {
       font-size: 25px; } }
@@ -168,9 +173,22 @@ hr {
 .p1 {
   font-size: 30px;
   padding-left: 2%; }
+  @media (max-width: 730px) {
+    .p1 {
+      width: 90%;
+      font-size: 15px;
+      text-align: center;
+      padding-left: 0%; } }
   @media (min-width: 992px) and (max-width: 1199px) {
     .p1 {
       font-size: 25px; } }
+
+@media (max-width: 730px) {
+  .p2 {
+    font-size: 15px; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .p2 {
+    font-size: 25px; } }
 
 #market .x.axis text {
   font-size: 10px;
@@ -203,11 +221,11 @@ hr {
 #country {
   padding-bottom: 25%;
   padding-top: 25%; }
-  @media (max-width: 767px) {
+  @media (max-width: 730px) {
     #country {
       padding-bottom: 0%;
       padding-top: 0%; } }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 731px) and (max-width: 991px) {
     #country {
       padding-bottom: 5%;
       padding-top: 5%; } }
@@ -222,11 +240,11 @@ hr {
 
 #selectMenu {
   width: 100%; }
-  @media (max-width: 767px) {
+  @media (max-width: 730px) {
     #selectMenu {
       width: 25%;
       padding-left: 6%; } }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 731px) and (max-width: 991px) {
     #selectMenu {
       padding-left: 2%; } }
 
@@ -234,20 +252,20 @@ img {
   margin-top: 5%;
   width: 100%;
   border: solid 2px #000000; }
-  @media (max-width: 767px) {
+  @media (max-width: 730px) {
     img {
       width: 95%;
       margin-left: 0%; } }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 731px) and (max-width: 991px) {
     img {
       width: 100%; } }
 
 .padding1 {
   padding-left: 4%; }
-  @media (max-width: 767px) {
+  @media (max-width: 730px) {
     .padding1 {
       padding-left: 1%; } }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 731px) and (max-width: 991px) {
     .padding1 {
       padding-left: 5%; } }
   @media (min-width: 992px) and (max-width: 1199px) {
@@ -268,11 +286,11 @@ img {
 
 .padding4 {
   padding-left: 13%; }
-  @media (max-width: 767px) {
+  @media (max-width: 730px) {
     .padding4 {
-      padding-top: 1%;
-      padding-bottom: 2%; } }
-  @media (min-width: 768px) and (max-width: 991px) {
+      padding-bottom: 2%;
+      padding-left: 0%; } }
+  @media (min-width: 731px) and (max-width: 991px) {
     .padding4 {
       padding-top: 0%;
       padding-bottom: 0%; } }
@@ -285,10 +303,10 @@ img {
   .padding5 {
     padding-top: 9%; } }
 
-@media (max-width: 767px) {
+@media (max-width: 730px) {
   .padding6 {
     padding-left: 1%; } }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 731px) and (max-width: 991px) {
   .padding6 {
     padding-left: 5%; } }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -311,52 +329,52 @@ img {
 
 .mar1 {
   margin-top: 2%; }
-  @media (max-width: 767px) {
+  @media (max-width: 730px) {
     .mar1 {
       margin-top: 6%; } }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 731px) and (max-width: 991px) {
     .mar1 {
       margin-top: 2%; } }
 
 .mar2 {
   margin-bottom: 2%; }
 
-@media (max-width: 767px) {
+@media (max-width: 730px) {
   .mar3 {
     margin-left: 2%; } }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 731px) and (max-width: 991px) {
   .mar3 {
     margin-left: 5%; } }
 
-@media (max-width: 767px) {
+@media (max-width: 730px) {
   .mar4 {
     margin-left: 2%; } }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 731px) and (max-width: 991px) {
   .mar4 {
     margin-left: 1%; } }
 @media (min-width: 992px) and (max-width: 1199px) {
   .mar4 {
     margin-left: 1%; } }
 
-@media (max-width: 767px) {
+@media (max-width: 730px) {
   .mar5 {
     margin-top: 6%; } }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 731px) and (max-width: 991px) {
   .mar5 {
     margin-top: 0%; } }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 731px) and (max-width: 991px) {
   .mar6 {
     margin-left: 4%; } }
 
-@media (max-width: 767px) {
+@media (max-width: 730px) {
   .mar7 {
     margin-left: 3%; } }
 
-@media (max-width: 767px) {
+@media (max-width: 730px) {
   .mar8 {
     margin-left: 0%; } }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 731px) and (max-width: 991px) {
   .mar8 {
     margin-left: 5%; } }
 
