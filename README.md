@@ -1,5 +1,5 @@
 
-Project Status : <strong>In construction.</strong>
+Project Status : <strong>Finished.</strong>
 -
 
 -----------------------------------------------------------
@@ -22,6 +22,13 @@ This dashboard was designed to show information regarding people who travelled t
 London between the year 2002 - 2018. The idea was to correlate all the information
 into charts that would be interactive allowing the user to cross-filter all the
 charts so they could see how each effected the other.
+
+Even though half the charts do the same thing, they allow the user to see that data in 
+different ways. It was not my intention to leave empty space on both sides of the dashboards
+but after consideration of possible uses for that space, it occurred to me that some website use
+this space for advertisements. As i cannot yet do advertisements on my projects i have decided to
+leave the empty spaces for future advertisement use. such advertisements would include trips to London
+from various travel agencies, including special deals they would like shown.
 
 -----------------------------------------------------------
 
@@ -136,6 +143,27 @@ how to implement this into the project.
 after some hard work i managed to fix the chart, but the error crept back on just the United Arab Emirates bar.
 Unfortunately i cannot remember how i originally fixed this so until i do this bar will be hidden.
 
+All bugs have now been fixed, any other bugs out there are unknown to me due to no concole alerts pointing
+problems out to me.
+
+-----------------------------------------------------------
+
+<strong>Testing:</strong>
+-
+
+After finishing the coding i conducted some tests on the dashboard through my mobile, tablet and 
+desktop. The chart works as expected, it allows the user to select country's through the menu slector
+or by clicking on the sections of the Country of Origin chart. I followed up by testing the reset button,
+there is a small issue when it is clicked that the Total Spend and Total Visits numbers jerk abit showing
+random numbers, but this only lasts whilst it is rounding up or down to the new total. This same issue crops up
+when selecting a part of each chart. I currently do not know how to solve this but due to these sections of 
+the dashboard will be hidden above the top of the screen when the user scrolls down i do not see it to be
+a major issue that needs fixing before this project is published.
+
+Most of my testing was done during development, i would do some coding then check how it would effect the dashboard
+on the screen resolution i was trying to effect. The evidance for this will be pressent in the commit logs on my
+workspace on Git-Hub.
+
 -----------------------------------------------------------
 
 <strong>contributions:</strong>
@@ -208,3 +236,8 @@ that can improve my project a great deal. The sites he shown me were: <a href="h
 </a>, <a href="http://animista.net/">Animista</a> and <a href="https://introjs.com/">introjs.com</a>.
 
 image is from Wikipedia
+
+<strong>Foot note</strong>
+-
+
+Iwould like to make known that all content in this dashboard is for learning purposes and will not be used for commercial use.
