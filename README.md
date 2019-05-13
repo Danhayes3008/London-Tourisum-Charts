@@ -112,20 +112,13 @@ due to the simple methods to do so. To upload to Git-Hub you first have to creat
 a repository on Git-Hub then enter the following commands onto the command window on cloud 9:
 
 
-- git remote add origin git@github.com:Danhayes3008/repository-name.git
-- git initial
-- git add .
-- git commit -m "update" .
-- git push -u origin master
+- First i clicked on the project i wanted to have deployed.
+- Then i selected settings and scrolled down to the GitHub Pages section in options.
+- Here we must first select the source (the branch to be deployed).
+- After selecting the source i selected a theme to be used.
+- Next was to choose a domain. This however is not requierd for a course project.
 
-
-By doing this all the work on the website is backed up in-case there is problems with 
-the development side. It will allow me to recover a previously deployed file allowing me to
-recover any information that was lost or incorrectly altered.
-
-
-To try this locally through cloud 9 inter the following command into a blank work-space's terminal:
-git clone https://github.com/Danhayes3008/Milestone-project-2.git
+The website address is: <strong><a href="https://danhayes3008.github.io/Milestone-Project-2/" target="_blank">London dashboard</a></strong>
 
 -----------------------------------------------------------
 
