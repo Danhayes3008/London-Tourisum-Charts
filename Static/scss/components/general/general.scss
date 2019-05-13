@@ -74,32 +74,34 @@ hr{
 }
 .p{
     font-size: 30px;
-    padding-top: 5%;
+    padding-top: 1%;
     padding-left: 2%;
+    text-align: center;
     
     @include mobile{
         font-size: 15px;
-        text-align: center;
+        
         padding-left: 0%;
     }
     
     @include computer{
-        font-size: 25px;
+        font-size: 20px;
     }
 }
 .p1{
     font-size: 30px;
     padding-left: 2%;
+    padding-top: .5%;
+    text-align: center;
     
     @include mobile{
         width: 90%;
         font-size: 15px;
-        text-align: center;
         padding-left: 0%;
     }
     
     @include computer{
-        font-size: 25px;
+        font-size: 20px;
     }
 }
 
@@ -109,7 +111,7 @@ hr{
     }
     
     @include computer{
-        font-size: 25px;
+        font-size: 20px;
     }
 }
 
