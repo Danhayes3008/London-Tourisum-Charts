@@ -173,7 +173,6 @@ Further down the road when i start using J query.
 Jo also provided me with a way to make my large charts look better on smaller screens
 by adding overflow: auto to the charts it is needed on.
 
-
 <strong>Marie O</strong>
 -
 
