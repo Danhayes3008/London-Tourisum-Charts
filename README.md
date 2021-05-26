@@ -46,8 +46,7 @@ closest i could get to the wire frames i made.
 -
 
 The following link sends you to the preview of this dashboard:<strong><a href="
-https://preview.c9users.io/danielhayes/milesto
-ne-project-2/index.html?_c9_id=livepreview1&_c9_host=https://ide.c9.io" target=
+https://danhayes3008.github.io/London-Tourisum-Charts/" target=
 "_blank">
 Milestone project 2</a></strong>
 
