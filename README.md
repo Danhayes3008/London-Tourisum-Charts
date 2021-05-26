@@ -117,7 +117,7 @@ a repository on Git-Hub then enter the following commands onto the command windo
 - After selecting the source i selected a theme to be used.
 - Next was to choose a domain. This however is not requierd for a course project.
 
-The website address is: <strong><a href="https://danhayes3008.github.io/Milestone-Project-2/" target="_blank">London dashboard</a></strong>
+The website address is: <strong><a href="https://danhayes3008.github.io/London-Tourisum-Charts/" target="_blank">London dashboard</a></strong>
 
 -----------------------------------------------------------
 
